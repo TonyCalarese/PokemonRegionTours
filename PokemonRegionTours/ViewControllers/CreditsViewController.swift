@@ -1,14 +1,14 @@
 //
-//  FirstViewController.swift
+//  CreditsViewController.swift
 //  PokemonRegionTours
 //
-//  Created by Garvey, Nicholas on 2/21/20.
+//  Created by Nick Garvey on 3/19/20.
 //  Copyright © 2020 Calarese & Garvey Innovation. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class CreditsViewController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,4 +17,3 @@ class FirstViewController: UIViewController {
 
 
 }
-
