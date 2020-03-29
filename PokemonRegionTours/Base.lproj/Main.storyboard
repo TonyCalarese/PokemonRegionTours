@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,6 +23,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="69q-hH-9PH" kind="show" id="kTi-fY-MZo"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -391,17 +394,39 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
             </objects>
             <point key="canvasLocation" x="923" y="-788"/>
         </scene>
+        <!--Notes View Controller-->
+        <scene sceneID="j6W-xo-0D8">
+            <objects>
+                <viewController id="69q-hH-9PH" customClass="NotesViewController" customModule="PokemonRegionTours" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pgi-LP-fjO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ZsQ-Yz-YcS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y3Q-yl-RBz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rFt-Ee-eml">
+                            <connections>
+                                <action selector="addNewItem:" destination="69q-hH-9PH" id="scl-AL-c3d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aph-cu-Il8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2455" y="540"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="doc.text" catalog="system" width="56" height="64"/>
-        <image name="doc.text.fill" catalog="system" width="56" height="64"/>
-        <image name="link.circle" catalog="system" width="64" height="60"/>
-        <image name="link.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="map" catalog="system" width="64" height="56"/>
-        <image name="map.fill" catalog="system" width="64" height="56"/>
-        <image name="star" catalog="system" width="64" height="58"/>
-        <image name="star.fill" catalog="system" width="64" height="58"/>
-        <image name="video" catalog="system" width="64" height="40"/>
-        <image name="video.fill" catalog="system" width="64" height="40"/>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="doc.text.fill" catalog="system" width="115" height="128"/>
+        <image name="link.circle" catalog="system" width="128" height="121"/>
+        <image name="link.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="map" catalog="system" width="128" height="113"/>
+        <image name="map.fill" catalog="system" width="128" height="113"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="video" catalog="system" width="128" height="83"/>
+        <image name="video.fill" catalog="system" width="128" height="82"/>
     </resources>
 </document>

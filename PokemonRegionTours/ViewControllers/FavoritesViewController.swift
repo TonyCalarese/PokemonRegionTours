@@ -2,7 +2,7 @@
 //  FavoritesViewController.swift
 //  PokemonRegionTours
 //
-//  Created by Nick Garvey on 3/19/20.
+//  Created by Nick Garvey and Tony Calarese on 3/19/20.
 //  Copyright © 2020 Calarese & Garvey Innovation. All rights reserved.
 //
 
