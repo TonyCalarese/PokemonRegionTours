@@ -45,13 +45,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="h6s-XT-Jy3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="h6s-XT-Jy3" customClass="ImageTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h6s-XT-Jy3" id="ehO-r7-rh2">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ls7-Pe-BnR">
+                                            <rect key="frame" x="2" y="2" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Bt4-pt-bZw"/>
+                                                <constraint firstAttribute="width" secondItem="ls7-Pe-BnR" secondAttribute="height" multiplier="1:1" id="uVH-Tz-ZyZ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aF-h2-VQA">
+                                            <rect key="frame" x="62" y="11.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9aF-h2-VQA" firstAttribute="centerY" secondItem="ehO-r7-rh2" secondAttribute="centerY" id="7D8-rZ-UFE"/>
+                                        <constraint firstItem="9aF-h2-VQA" firstAttribute="leading" secondItem="ls7-Pe-BnR" secondAttribute="trailing" constant="20" id="Itw-rU-IAE"/>
+                                        <constraint firstItem="ls7-Pe-BnR" firstAttribute="centerY" secondItem="ehO-r7-rh2" secondAttribute="centerY" id="bAL-Jb-1Ml"/>
+                                        <constraint firstItem="ls7-Pe-BnR" firstAttribute="leading" secondItem="ehO-r7-rh2" secondAttribute="leading" constant="2" id="igi-x1-EC3"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="icon" destination="ls7-Pe-BnR" id="pA3-oP-UDi"/>
+                                    <outlet property="title" destination="9aF-h2-VQA" id="TfI-7f-Icv"/>
+                                    <segue destination="Skn-lg-LU3" kind="show" id="YrK-ee-q16"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -64,6 +90,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RME-el-JB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1687" y="-788"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qqO-bS-T3l">
+            <objects>
+                <viewController id="Skn-lg-LU3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gKe-Df-YXw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPG-LL-Y09">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHE-Zg-k5y">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eus-cZ-gle">
+                                                <rect key="frame" x="0.0" y="0.0" width="264" height="150"/>
+                                            </imageView>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VUX-R0-nbY">
+                                                <rect key="frame" x="264" y="0.0" width="150" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="VUX-R0-nbY" secondAttribute="height" multiplier="1:1" id="fCg-dm-ggD"/>
+                                                </constraints>
+                                            </mapView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="eW9-IP-6wf"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmZ-2H-cWH">
+                                        <rect key="frame" x="20" y="170" width="2332.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inj-c1-15X">
+                                        <rect key="frame" x="20" y="223.5" width="2332.5" height="108.5"/>
+                                        <string key="text">Lorem ipsum dolor sit amet, te dolore partem torquatos nec, in sed nibh utamur disputando. No pro dicam cetero euismod, rebum omittam no usu. Ea mea mucius dolorum invenire, ei vim phaedrum voluptatum. No per lucilius mediocrem instructior, sit velit dictas inermis ei, in usu animal suscipit atomorum.
+
+Autem intellegat neglegentur has ut, his eius autem consequuntur te, cotidieque disputationi ei eam. Sit populo putent an. Et est assum vitae bonorum. Brute tempor id mea, sed nibh legendos ne, vix at agam audire. Liber altera complectitur cu eam. Sed laudem putent in.
+
+Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea, et omittam detracto pro. Eu ipsum evertitur eam. Ut omnes ancillae reprehendunt eum, partiendo persecuti ius ut, convenire disputando ut usu. Sanctus dolorum et sed, his ei ceteros commune salutandi. Et usu impedit veritus.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gmZ-2H-cWH" secondAttribute="trailing" constant="20" id="1Yh-4w-maf"/>
+                                    <constraint firstItem="fHE-Zg-k5y" firstAttribute="top" secondItem="YPG-LL-Y09" secondAttribute="top" id="6pt-Tn-o2Y"/>
+                                    <constraint firstItem="fHE-Zg-k5y" firstAttribute="centerX" secondItem="YPG-LL-Y09" secondAttribute="centerX" id="7iD-9h-BWp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Inj-c1-15X" secondAttribute="trailing" constant="20" id="OZy-UE-fih"/>
+                                    <constraint firstItem="fHE-Zg-k5y" firstAttribute="width" secondItem="YPG-LL-Y09" secondAttribute="width" id="bmz-xu-kYL"/>
+                                    <constraint firstItem="gmZ-2H-cWH" firstAttribute="top" secondItem="fHE-Zg-k5y" secondAttribute="bottom" constant="20" id="fIN-XY-Lf2"/>
+                                    <constraint firstItem="gmZ-2H-cWH" firstAttribute="leading" secondItem="YPG-LL-Y09" secondAttribute="leading" constant="20" id="lY0-Tf-DLi"/>
+                                    <constraint firstItem="Inj-c1-15X" firstAttribute="leading" secondItem="gmZ-2H-cWH" secondAttribute="leading" id="nVk-yO-lEm"/>
+                                    <constraint firstItem="Inj-c1-15X" firstAttribute="top" secondItem="gmZ-2H-cWH" secondAttribute="bottom" constant="20" id="rQb-1e-MwQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Inj-c1-15X" secondAttribute="bottom" constant="20" id="yqL-qU-MhK"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="wZ5-N2-hyM"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="auU-K3-zgz"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YPG-LL-Y09" firstAttribute="width" secondItem="EMe-av-xd5" secondAttribute="width" id="BCi-Ib-knh"/>
+                            <constraint firstItem="YPG-LL-Y09" firstAttribute="centerY" secondItem="EMe-av-xd5" secondAttribute="centerY" id="aTc-Yo-4O7"/>
+                            <constraint firstItem="YPG-LL-Y09" firstAttribute="height" secondItem="EMe-av-xd5" secondAttribute="height" id="jyc-rY-HVU"/>
+                            <constraint firstItem="YPG-LL-Y09" firstAttribute="centerX" secondItem="EMe-av-xd5" secondAttribute="centerX" id="xcL-OV-EYH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EMe-av-xd5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YdV-Hi-lAL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fTY-t9-sfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2429" y="-788"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -84,7 +187,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1213" y="1917"/>
+            <point key="canvasLocation" x="-454" y="1917"/>
         </scene>
         <!--Tours-->
         <scene sceneID="LQd-yo-q7j">
