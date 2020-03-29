@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C092162224314461009C069A /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C092162124314461009C069A /* Notes.swift */; };
 		E9DDE28E24006C2800C46E20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDE28D24006C2800C46E20 /* AppDelegate.swift */; };
 		E9DDE29024006C2800C46E20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDE28F24006C2800C46E20 /* SceneDelegate.swift */; };
 		E9DDE29224006C2800C46E20 /* DestinationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDE29124006C2800C46E20 /* DestinationsViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C092162124314461009C069A /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		E9DDE28A24006C2800C46E20 /* PokemonRegionTours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonRegionTours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DDE28D24006C2800C46E20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9DDE28F24006C2800C46E20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				FB4968A7242FFB49007E296A /* Destination.swift */,
 				FB4968A9242FFC79007E296A /* Itemable.swift */,
 				FB443D5824300EDB007593AA /* ItemStore.swift */,
+				C092162124314461009C069A /* Notes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9DDE29424006C2800C46E20 /* ToursViewContoller.swift in Sources */,
+				C092162224314461009C069A /* Notes.swift in Sources */,
 				FB63A4792423D55C00EAB96B /* NotesViewController.swift in Sources */,
 				FB443D5924300EDB007593AA /* ItemStore.swift in Sources */,
 				FB4968A8242FFB49007E296A /* Destination.swift in Sources */,
