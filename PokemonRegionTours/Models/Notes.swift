@@ -8,6 +8,16 @@
 
 import UIKit
 
-class Notes: NSObject {
+class Notes: NSObject, Itemable {
+    var name: String
+    var desc: String
+    var image: String?
+    
+    required init(name: String, desc: String, image: String?) {
+        self.name = name
+        self.desc = desc
+        self.image = image
+    }
+    
     
 }
