@@ -15,6 +15,10 @@ class ItemStore<Type: Itemable> {
         return Type(name: "", desc: "", image: nil)
     }
     
+    @discardableResult func createItem(name: String, desc: String, image: String?) -> Type {
+        return Type(name: name, desc: desc, image: image)
+    }
+    
     func loadItems(from plist: String) -> Bool {
         do {
             let url = Bundle.main.url(forResource: plist, withExtension: "plist")!
