@@ -14,9 +14,8 @@ class NotesViewController : UITableViewController {
     
     @IBAction func addNewNotes(_ sender: Any) {
         // Create a new Item and add it to the store
-            let newItem = NotesStore.createItem()
-                       
-                       // Figure out where that item is in the array
+        let newItem = NotesStore.createItem()// Figure out where that item is in the array
+        
         if let index = NotesStore.allItems.firstIndex(of: newItem) {
                 let indexPath = IndexPath(row: index, section: 0)
                            
@@ -73,8 +72,7 @@ class NotesViewController : UITableViewController {
     override func tableView(_ tableView: UITableView,
         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             // Create an instance of UITableViewCell, with default appearance
-            let cell = tableView.dequeueReusableCell(withIdentifier: "notesCell",
-                for: indexPath) as! NotesTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "notesCell", for: indexPath) as! NotesTableViewCell
             
          
             let item = NotesStore.allItems[indexPath.row]

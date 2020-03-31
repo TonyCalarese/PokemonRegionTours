@@ -22,6 +22,18 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J9K-k9-fYz" id="Qht-WQ-wTi">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRX-bR-JWf">
+                                            <rect key="frame" x="186" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oRX-bR-JWf" firstAttribute="centerY" secondItem="Qht-WQ-wTi" secondAttribute="centerY" id="5CW-UT-bWA"/>
+                                        <constraint firstItem="oRX-bR-JWf" firstAttribute="centerX" secondItem="Qht-WQ-wTi" secondAttribute="centerX" id="Yte-A0-nmD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="69q-hH-9PH" kind="show" id="kTi-fY-MZo"/>
