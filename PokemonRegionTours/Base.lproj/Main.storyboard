@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notesCell" id="J9K-k9-fYz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notesCell" id="J9K-k9-fYz" customClass="NotesTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J9K-k9-fYz" id="Qht-WQ-wTi">
@@ -150,12 +150,12 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inj-c1-15X">
                                         <rect key="frame" x="20" y="223.5" width="374" height="636.5"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit amet, te dolore partem torquatos nec, in sed nibh utamur disputando. No pro dicam cetero euismod, rebum omittam no usu. Ea mea mucius dolorum invenire, ei vim phaedrum voluptatum. No per lucilius mediocrem instructior, sit velit dictas inermis ei, in usu animal suscipit atomorum.
+                                        <string key="text">Lorem ipsum dolor sit amet, te dolore partem torquatos nec, in sed nibh utamur disputando. No pro dicam cetero euismod, rebum omittam no usu. Ea mea mucius dolorum invenire, ei vim phaedrum voluptatum. No per lucilius mediocrem instructior, sit velit dictas inermis ei, in usu animal suscipit atomorum.
 
 Autem intellegat neglegentur has ut, his eius autem consequuntur te, cotidieque disputationi ei eam. Sit populo putent an. Et est assum vitae bonorum. Brute tempor id mea, sed nibh legendos ne, vix at agam audire. Liber altera complectitur cu eam. Sed laudem putent in.
 
 Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea, et omittam detracto pro. Eu ipsum evertitur eam. Ut omnes ancillae reprehendunt eum, partiendo persecuti ius ut, convenire disputando ut usu. Sanctus dolorum et sed, his ei ceteros commune salutandi. Et usu impedit veritus.
-Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea, et omittam detracto pro. Eu ipsum evertitur eam. Ut omnes ancillae reprehendunt eum, partiendo persecuti ius ut, convenire disputando ut usu. Sanctus dolorum et sed, his ei ceteros commune salutandi. Et usu impedit veritus.</mutableString>
+Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea, et omittam detracto pro. Eu ipsum evertitur eam. Ut omnes ancillae reprehendunt eum, partiendo persecuti ius ut, convenire disputando ut usu. Sanctus dolorum et sed, his ei ceteros commune salutandi. Et usu impedit veritus.</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

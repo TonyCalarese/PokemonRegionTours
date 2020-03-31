@@ -12,11 +12,19 @@ class ItemStore<Type: Itemable> {
     var allItems = [Type]()
     
     @discardableResult func createItem() -> Type {
-        return Type(name: "NewItem", desc: "NewItem", image: nil)
+        let newItem = Type(name: "NewItem", desc: "NewItem", image: nil)
+        
+        allItems.append(newItem)
+        
+        return newItem
     }
     
     @discardableResult func createItem(name: String, desc: String, image: String?) -> Type {
-        return Type(name: name, desc: desc, image: image)
+                let newItem = Type(name: name, desc: desc, image: image)
+        
+        allItems.append(newItem)
+        
+        return newItem
     }
     
     func loadItems(from plist: String) -> Bool {

@@ -19,13 +19,14 @@ class NotesViewController : UITableViewController {
         print("Button Pressed")
         
         
-        NotesStore.createItem(name: newText, desc: newText, image: nil)// Figure out where that item is in the array
+        let newItem = NotesStore.createItem(name: newText, desc: newText, image: nil)// Figure out where that item is in the array
         
-        let indexPath = IndexPath(row: NotesStore.allItems.count, section: 0)
-                           
-        tableView.beginUpdates()
-        tableView.insertRows(at: [indexPath], with: .automatic)
-        tableView.endUpdates()
+        if let index = NotesStore.allItems.firstIndex(of: newItem) {
+            let indexPath = IndexPath(row: index, section: 0)
+                               
+            tableView.insertRows(at: [indexPath], with: .automatic)
+        }
+
     }
 
     override func viewDidLoad() {
