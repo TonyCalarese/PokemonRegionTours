@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Code is highly based off of the homepwner by Big Nerd Ranch © 2015
 class NotesViewController : UITableViewController {
 
     var NotesStore = ItemStore<Notes>()
