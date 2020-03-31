@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRX-bR-JWf">
-                                            <rect key="frame" x="186" y="11" width="42" height="21"/>
+                                            <rect key="frame" x="186" y="11.5" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="h6s-XT-Jy3" customClass="ImageTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageTableViewCell" id="h6s-XT-Jy3" customClass="ImageTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h6s-XT-Jy3" id="ehO-r7-rh2">
@@ -143,18 +143,19 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmZ-2H-cWH">
-                                        <rect key="frame" x="20" y="170" width="2332.5" height="33.5"/>
+                                        <rect key="frame" x="20" y="170" width="66.5" height="33.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inj-c1-15X">
-                                        <rect key="frame" x="20" y="223.5" width="2332.5" height="108.5"/>
-                                        <string key="text">Lorem ipsum dolor sit amet, te dolore partem torquatos nec, in sed nibh utamur disputando. No pro dicam cetero euismod, rebum omittam no usu. Ea mea mucius dolorum invenire, ei vim phaedrum voluptatum. No per lucilius mediocrem instructior, sit velit dictas inermis ei, in usu animal suscipit atomorum.
+                                        <rect key="frame" x="20" y="223.5" width="374" height="636.5"/>
+                                        <mutableString key="text">Lorem ipsum dolor sit amet, te dolore partem torquatos nec, in sed nibh utamur disputando. No pro dicam cetero euismod, rebum omittam no usu. Ea mea mucius dolorum invenire, ei vim phaedrum voluptatum. No per lucilius mediocrem instructior, sit velit dictas inermis ei, in usu animal suscipit atomorum.
 
 Autem intellegat neglegentur has ut, his eius autem consequuntur te, cotidieque disputationi ei eam. Sit populo putent an. Et est assum vitae bonorum. Brute tempor id mea, sed nibh legendos ne, vix at agam audire. Liber altera complectitur cu eam. Sed laudem putent in.
 
-Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea, et omittam detracto pro. Eu ipsum evertitur eam. Ut omnes ancillae reprehendunt eum, partiendo persecuti ius ut, convenire disputando ut usu. Sanctus dolorum et sed, his ei ceteros commune salutandi. Et usu impedit veritus.</string>
+Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea, et omittam detracto pro. Eu ipsum evertitur eam. Ut omnes ancillae reprehendunt eum, partiendo persecuti ius ut, convenire disputando ut usu. Sanctus dolorum et sed, his ei ceteros commune salutandi. Et usu impedit veritus.
+Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea, et omittam detracto pro. Eu ipsum evertitur eam. Ut omnes ancillae reprehendunt eum, partiendo persecuti ius ut, convenire disputando ut usu. Sanctus dolorum et sed, his ei ceteros commune salutandi. Et usu impedit veritus.</mutableString>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -164,7 +165,6 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                                     <constraint firstAttribute="trailing" secondItem="gmZ-2H-cWH" secondAttribute="trailing" constant="20" id="1Yh-4w-maf"/>
                                     <constraint firstItem="fHE-Zg-k5y" firstAttribute="top" secondItem="YPG-LL-Y09" secondAttribute="top" id="6pt-Tn-o2Y"/>
                                     <constraint firstItem="fHE-Zg-k5y" firstAttribute="centerX" secondItem="YPG-LL-Y09" secondAttribute="centerX" id="7iD-9h-BWp"/>
-                                    <constraint firstAttribute="trailing" secondItem="Inj-c1-15X" secondAttribute="trailing" constant="20" id="OZy-UE-fih"/>
                                     <constraint firstItem="fHE-Zg-k5y" firstAttribute="width" secondItem="YPG-LL-Y09" secondAttribute="width" id="bmz-xu-kYL"/>
                                     <constraint firstItem="gmZ-2H-cWH" firstAttribute="top" secondItem="fHE-Zg-k5y" secondAttribute="bottom" constant="20" id="fIN-XY-Lf2"/>
                                     <constraint firstItem="gmZ-2H-cWH" firstAttribute="leading" secondItem="YPG-LL-Y09" secondAttribute="leading" constant="20" id="lY0-Tf-DLi"/>
@@ -181,6 +181,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                             <constraint firstItem="YPG-LL-Y09" firstAttribute="width" secondItem="EMe-av-xd5" secondAttribute="width" id="BCi-Ib-knh"/>
                             <constraint firstItem="YPG-LL-Y09" firstAttribute="centerY" secondItem="EMe-av-xd5" secondAttribute="centerY" id="aTc-Yo-4O7"/>
                             <constraint firstItem="YPG-LL-Y09" firstAttribute="height" secondItem="EMe-av-xd5" secondAttribute="height" id="jyc-rY-HVU"/>
+                            <constraint firstItem="Inj-c1-15X" firstAttribute="trailing" secondItem="EMe-av-xd5" secondAttribute="trailing" constant="-20" id="lee-0u-cMj"/>
                             <constraint firstItem="YPG-LL-Y09" firstAttribute="centerX" secondItem="EMe-av-xd5" secondAttribute="centerX" id="xcL-OV-EYH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EMe-av-xd5"/>
@@ -447,15 +448,15 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
         </scene>
     </scenes>
     <resources>
-        <image name="doc.text" catalog="system" width="115" height="128"/>
-        <image name="doc.text.fill" catalog="system" width="115" height="128"/>
-        <image name="link.circle" catalog="system" width="128" height="121"/>
-        <image name="link.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="map" catalog="system" width="128" height="113"/>
-        <image name="map.fill" catalog="system" width="128" height="113"/>
-        <image name="star" catalog="system" width="128" height="116"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
-        <image name="video" catalog="system" width="128" height="83"/>
-        <image name="video.fill" catalog="system" width="128" height="82"/>
+        <image name="doc.text" catalog="system" width="56" height="64"/>
+        <image name="doc.text.fill" catalog="system" width="56" height="64"/>
+        <image name="link.circle" catalog="system" width="64" height="60"/>
+        <image name="link.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="map" catalog="system" width="64" height="56"/>
+        <image name="map.fill" catalog="system" width="64" height="56"/>
+        <image name="star" catalog="system" width="64" height="58"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
+        <image name="video" catalog="system" width="64" height="40"/>
+        <image name="video.fill" catalog="system" width="64" height="40"/>
     </resources>
 </document>

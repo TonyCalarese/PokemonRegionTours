@@ -16,8 +16,8 @@ class DestinationsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if destStore.loadItems(from: "test") {
-            
+        if !destStore.loadItems(from: "test") {
+            print("Items did not load!")
         }
     }
     
@@ -27,6 +27,19 @@ class DestinationsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         destStore.allItems.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell") as! ImageTableViewCell
+        
+        let dest = destStore.allItems[indexPath.row]
+        
+        cell.title.text = dest.name
+        if let imgString = dest.image {
+            cell.icon.image = UIImage(named: imgString)
+        }
+        
+        return cell
     }
 
 
