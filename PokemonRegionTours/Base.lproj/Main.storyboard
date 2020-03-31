@@ -148,7 +148,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inj-c1-15X">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inj-c1-15X">
                                         <rect key="frame" x="20" y="223.5" width="2332.5" height="108.5"/>
                                         <string key="text">Lorem ipsum dolor sit amet, te dolore partem torquatos nec, in sed nibh utamur disputando. No pro dicam cetero euismod, rebum omittam no usu. Ea mea mucius dolorum invenire, ei vim phaedrum voluptatum. No per lucilius mediocrem instructior, sit velit dictas inermis ei, in usu animal suscipit atomorum.
 

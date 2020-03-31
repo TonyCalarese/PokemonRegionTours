@@ -15,15 +15,17 @@ class NotesViewController : UITableViewController {
     
     @IBAction func addNewNotes(_ sender: Any) {
         // Create a new Item and add it to the store
-        let newItem = NotesStore.createItem()// Figure out where that item is in the array
+        let newText = "New Note"
+        print("Button Pressed")
         
-        if let index = NotesStore.allItems.firstIndex(of: newItem) {
-                let indexPath = IndexPath(row: index, section: 0)
+        
+        NotesStore.createItem(name: newText, desc: newText, image: nil)// Figure out where that item is in the array
+        
+        let indexPath = IndexPath(row: NotesStore.allItems.count, section: 0)
                            
-                           // Insert this new row into the table.
-            tableView.insertRows(at: [indexPath], with: .automatic)
-        }
-        
+        tableView.beginUpdates()
+        tableView.insertRows(at: [indexPath], with: .automatic)
+        tableView.endUpdates()
     }
 
     override func viewDidLoad() {
@@ -38,34 +40,8 @@ class NotesViewController : UITableViewController {
         tableView.reloadData()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // If the triggered segue is the "showItem" segue
-        
-        switch segue.identifier {
-        case "showItem"?:
-            // Figure out which row was just tapped
-            if let row = tableView.indexPathForSelectedRow?.row {
-                // Get the item associated with this row and pass it along
-                let item = NotesStore.allItems[row]
-               // let detailViewController = segue.destination as! DetailViewController //create new segue
-                //detailViewController.item = item
-            }
-        default:
-            preconditionFailure("Unexpected segue identifier.")
-        }
-    }
-    
-    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-    
-    }
-    
-    override func tableView(_ tableView: UITableView,
-        commit editingStyle: UITableViewCell.EditingStyle,
-        forRowAt indexPath: IndexPath) {
-            // If the table view is asking to commit a delete command...
-           
-    }
-    
+
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return NotesStore.allItems.count
     }
@@ -80,7 +56,6 @@ class NotesViewController : UITableViewController {
             
             cell.nameLabel.text = item.name
     
-            
             return cell
     }
 
