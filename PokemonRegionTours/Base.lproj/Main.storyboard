@@ -16,12 +16,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="J9K-k9-fYz">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notesCell" id="J9K-k9-fYz">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J9K-k9-fYz" id="Qht-WQ-wTi">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRX-bR-JWf">
+                                            <rect key="frame" x="186" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oRX-bR-JWf" firstAttribute="centerY" secondItem="Qht-WQ-wTi" secondAttribute="centerY" id="5CW-UT-bWA"/>
+                                        <constraint firstItem="oRX-bR-JWf" firstAttribute="centerX" secondItem="Qht-WQ-wTi" secondAttribute="centerX" id="Yte-A0-nmD"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="69q-hH-9PH" kind="show" id="kTi-fY-MZo"/>
@@ -33,7 +45,15 @@
                             <outlet property="delegate" destination="2i8-9B-tK3" id="e4I-ng-W91"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="WKz-UV-wsk"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="WKz-UV-wsk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Wlg-Kh-Uej">
+                            <connections>
+                                <action selector="addNewNotes:" destination="2i8-9B-tK3" id="Uao-Ft-PCY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nF1-mK-0hD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,9 +224,24 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Vda-v9-Odn">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vda-v9-Odn" id="GXd-V4-dfc">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vda-v9-Odn" id="GXd-V4-dfc" customClass="NotesTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZh-fr-f3t">
+                                            <rect key="frame" x="186" y="11.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yZh-fr-f3t" firstAttribute="centerX" secondItem="GXd-V4-dfc" secondAttribute="centerX" id="GLk-f3-tWn"/>
+                                        <constraint firstItem="yZh-fr-f3t" firstAttribute="centerY" secondItem="GXd-V4-dfc" secondAttribute="centerY" id="XBN-N8-Avp"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="yZh-fr-f3t" id="ynJ-QX-RaP"/>
+                                    </connections>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -219,7 +254,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6U-Gh-eBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="-133"/>
+            <point key="canvasLocation" x="1686.9565217391305" y="-133.25892857142856"/>
         </scene>
         <!--Links-->
         <scene sceneID="R5W-fY-5Q2">
@@ -394,23 +429,17 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
             </objects>
             <point key="canvasLocation" x="923" y="-788"/>
         </scene>
-        <!--Notes View Controller-->
+        <!--View Controller-->
         <scene sceneID="j6W-xo-0D8">
             <objects>
-                <viewController id="69q-hH-9PH" customClass="NotesViewController" customModule="PokemonRegionTours" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="69q-hH-9PH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pgi-LP-fjO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ZsQ-Yz-YcS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Y3Q-yl-RBz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rFt-Ee-eml">
-                            <connections>
-                                <action selector="addNewItem:" destination="69q-hH-9PH" id="scl-AL-c3d"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Y3Q-yl-RBz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aph-cu-Il8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

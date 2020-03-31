@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C092162224314461009C069A /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C092162124314461009C069A /* Notes.swift */; };
+		C092162424315557009C069A /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C092162324315557009C069A /* NotesTableViewCell.swift */; };
 		E9DDE28E24006C2800C46E20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDE28D24006C2800C46E20 /* AppDelegate.swift */; };
 		E9DDE29024006C2800C46E20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDE28F24006C2800C46E20 /* SceneDelegate.swift */; };
 		E9DDE29224006C2800C46E20 /* DestinationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDE29124006C2800C46E20 /* DestinationsViewController.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		C092162124314461009C069A /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		C092162324315557009C069A /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
 		E9DDE28A24006C2800C46E20 /* PokemonRegionTours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonRegionTours.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DDE28D24006C2800C46E20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9DDE28F24006C2800C46E20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0921625243156A7009C069A /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FB63A481242D4CFB00EAB96B /* ImageTableViewCell.swift */,
+				C092162324315557009C069A /* NotesTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		E9DDE28124006C2800C46E20 = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +140,7 @@
 				E9DDE29A24006C2800C46E20 /* LaunchScreen.storyboard */,
 				E9DDE29D24006C2800C46E20 /* Info.plist */,
 				FB63A4802423D62F00EAB96B /* ViewControllers */,
-				FB63A481242D4CFB00EAB96B /* ImageTableViewCell.swift */,
+				C0921625243156A7009C069A /* TableViewCells */,
 				FB443D5A2430145F007593AA /* test.plist */,
 			);
 			path = PokemonRegionTours;
@@ -314,6 +325,7 @@
 				FB63A4792423D55C00EAB96B /* NotesViewController.swift in Sources */,
 				FB443D5924300EDB007593AA /* ItemStore.swift in Sources */,
 				FB4968A8242FFB49007E296A /* Destination.swift in Sources */,
+				C092162424315557009C069A /* NotesTableViewCell.swift in Sources */,
 				E9DDE29224006C2800C46E20 /* DestinationsViewController.swift in Sources */,
 				FB63A482242D4CFB00EAB96B /* ImageTableViewCell.swift in Sources */,
 				FB4968AA242FFC79007E296A /* Itemable.swift in Sources */,
