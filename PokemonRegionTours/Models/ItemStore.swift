@@ -12,7 +12,7 @@ class ItemStore<Type: Itemable> {
     var allItems = [Type]()
     
     @discardableResult func createItem() -> Type {
-        return Type(name: "", desc: "", image: nil)
+        return Type(name: "NewItem", desc: "NewItem", image: nil)
     }
     
     @discardableResult func createItem(name: String, desc: String, image: String?) -> Type {
@@ -31,4 +31,6 @@ class ItemStore<Type: Itemable> {
         }
         return true
     }
+    
+   
 }
