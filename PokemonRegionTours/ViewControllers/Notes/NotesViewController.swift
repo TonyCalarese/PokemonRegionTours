@@ -55,5 +55,17 @@ class NotesViewController : UITableViewController {
     
             return cell
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "noteDetailView":
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let notes = NotesStore.allItems[row]
+                let vc = segue.destination as! NotesDetailViewController
+                vc.notes = notes
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
+    }
 }

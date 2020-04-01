@@ -10,17 +10,23 @@ import UIKit
 
 class NotesDetailViewController: UIViewController {
 
-    @IBAction func NoteTitle(_ sender: Any) {
-    }
-    
+    @IBOutlet weak var NoteTitle: UITextField!
     @IBOutlet weak var NoteImage: UIImageView!
-    
     @IBOutlet weak var BodyText: UITextView!
-    
+    var notes: Notes? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //Set the Default data
+        if let userNotes = notes{
+            NoteTitle.text = userNotes.name
+            if let img = userNotes.image {
+                NoteImage.image = UIImage(named: img)
+            }
+        
+            BodyText.text = userNotes.desc
+        }
+        
+        
     }
 
 

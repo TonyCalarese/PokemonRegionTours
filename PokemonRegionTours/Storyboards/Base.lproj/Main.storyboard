@@ -37,7 +37,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="oRX-bR-JWf" id="WzC-qD-59z"/>
-                                    <segue destination="69q-hH-9PH" kind="show" id="kTi-fY-MZo"/>
+                                    <segue destination="69q-hH-9PH" kind="show" identifier="noteDetailView" id="kTi-fY-MZo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -468,6 +468,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                     <connections>
                         <outlet property="BodyText" destination="xXe-9B-urR" id="BvR-nX-d5g"/>
                         <outlet property="NoteImage" destination="fQl-b1-W9G" id="3jF-wE-pOS"/>
+                        <outlet property="NoteTitle" destination="FbL-Yh-xyz" id="Ii2-TB-mAE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aph-cu-Il8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
