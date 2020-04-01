@@ -36,6 +36,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="nameLabel" destination="oRX-bR-JWf" id="WzC-qD-59z"/>
                                     <segue destination="69q-hH-9PH" kind="show" id="kTi-fY-MZo"/>
                                 </connections>
                             </tableViewCell>
@@ -228,21 +229,6 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vda-v9-Odn" id="GXd-V4-dfc" customClass="NotesTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZh-fr-f3t">
-                                            <rect key="frame" x="186" y="11.5" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="yZh-fr-f3t" firstAttribute="centerX" secondItem="GXd-V4-dfc" secondAttribute="centerX" id="GLk-f3-tWn"/>
-                                        <constraint firstItem="yZh-fr-f3t" firstAttribute="centerY" secondItem="GXd-V4-dfc" secondAttribute="centerY" id="XBN-N8-Avp"/>
-                                    </constraints>
-                                    <connections>
-                                        <outlet property="nameLabel" destination="yZh-fr-f3t" id="2DI-FQ-LmX"/>
-                                    </connections>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
