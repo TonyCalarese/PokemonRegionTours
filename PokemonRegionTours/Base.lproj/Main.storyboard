@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -241,7 +241,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                                         <constraint firstItem="yZh-fr-f3t" firstAttribute="centerY" secondItem="GXd-V4-dfc" secondAttribute="centerY" id="XBN-N8-Avp"/>
                                     </constraints>
                                     <connections>
-                                        <outlet property="nameLabel" destination="yZh-fr-f3t" id="ynJ-QX-RaP"/>
+                                        <outlet property="nameLabel" destination="yZh-fr-f3t" id="2DI-FQ-LmX"/>
                                     </connections>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -448,15 +448,15 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
         </scene>
     </scenes>
     <resources>
-        <image name="doc.text" catalog="system" width="56" height="64"/>
-        <image name="doc.text.fill" catalog="system" width="56" height="64"/>
-        <image name="link.circle" catalog="system" width="64" height="60"/>
-        <image name="link.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="map" catalog="system" width="64" height="56"/>
-        <image name="map.fill" catalog="system" width="64" height="56"/>
-        <image name="star" catalog="system" width="64" height="58"/>
-        <image name="star.fill" catalog="system" width="64" height="58"/>
-        <image name="video" catalog="system" width="64" height="40"/>
-        <image name="video.fill" catalog="system" width="64" height="40"/>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="doc.text.fill" catalog="system" width="115" height="128"/>
+        <image name="link.circle" catalog="system" width="128" height="121"/>
+        <image name="link.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="map" catalog="system" width="128" height="113"/>
+        <image name="map.fill" catalog="system" width="128" height="113"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="video" catalog="system" width="128" height="83"/>
+        <image name="video.fill" catalog="system" width="128" height="82"/>
     </resources>
 </document>
