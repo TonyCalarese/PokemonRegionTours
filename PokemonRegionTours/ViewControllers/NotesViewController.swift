@@ -19,6 +19,7 @@ class NotesViewController : UITableViewController {
         print("Button Pressed")
         
         
+        
         let newItem = NotesStore.createItem(name: newText, desc: newText, image: nil)// Figure out where that item is in the array
         
         if let index = NotesStore.allItems.firstIndex(of: newItem) {
@@ -52,9 +53,7 @@ class NotesViewController : UITableViewController {
             // Create an instance of UITableViewCell, with default appearance
             let cell = tableView.dequeueReusableCell(withIdentifier: "notesCell", for: indexPath) as! NotesTableViewCell
             
-         
             let item = NotesStore.allItems[indexPath.row]
-            
             cell.nameLabel.text = item.name
     
             return cell
