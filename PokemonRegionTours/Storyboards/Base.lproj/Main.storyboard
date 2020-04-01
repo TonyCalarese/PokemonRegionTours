@@ -422,21 +422,58 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
             </objects>
             <point key="canvasLocation" x="923" y="-788"/>
         </scene>
-        <!--View Controller-->
+        <!--Notes Detail View Controller-->
         <scene sceneID="j6W-xo-0D8">
             <objects>
-                <viewController id="69q-hH-9PH" sceneMemberID="viewController">
+                <viewController id="69q-hH-9PH" customClass="NotesDetailViewController" customModule="PokemonRegionTours" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pgi-LP-fjO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQl-b1-W9G">
+                                <rect key="frame" x="75" y="175" width="264" height="150"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FbL-Yh-xyz">
+                                <rect key="frame" x="94" y="111" width="213" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="NoteTitle:" destination="69q-hH-9PH" eventType="editingDidEnd" id="ZSO-Nq-SZI"/>
+                                    <action selector="NoteTitle:" destination="ZqR-Es-zE9" eventType="editingDidEnd" id="qqG-bY-76X"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xXe-9B-urR">
+                                <rect key="frame" x="20" y="363" width="374" height="381"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xXe-9B-urR" firstAttribute="centerX" secondItem="ZsQ-Yz-YcS" secondAttribute="centerX" id="0y5-5f-06j"/>
+                            <constraint firstItem="FbL-Yh-xyz" firstAttribute="top" secondItem="ZsQ-Yz-YcS" secondAttribute="top" constant="23" id="9Um-2d-W1u"/>
+                            <constraint firstItem="fQl-b1-W9G" firstAttribute="centerX" secondItem="ZsQ-Yz-YcS" secondAttribute="centerX" id="AZ2-Ok-dkU"/>
+                            <constraint firstItem="fQl-b1-W9G" firstAttribute="top" secondItem="FbL-Yh-xyz" secondAttribute="bottom" constant="30" id="Mc5-dY-b19"/>
+                            <constraint firstItem="ZsQ-Yz-YcS" firstAttribute="bottom" secondItem="xXe-9B-urR" secondAttribute="bottom" constant="20" id="SFF-DL-P0z"/>
+                            <constraint firstItem="ZsQ-Yz-YcS" firstAttribute="trailing" secondItem="FbL-Yh-xyz" secondAttribute="trailing" constant="107" id="u92-wy-77T"/>
+                            <constraint firstItem="FbL-Yh-xyz" firstAttribute="leading" secondItem="ZsQ-Yz-YcS" secondAttribute="leading" constant="275" id="zBr-B4-FIW"/>
+                            <constraint firstItem="xXe-9B-urR" firstAttribute="top" secondItem="fQl-b1-W9G" secondAttribute="bottom" constant="38" id="zsP-fA-BgM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZsQ-Yz-YcS"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y3Q-yl-RBz"/>
+                    <connections>
+                        <outlet property="BodyText" destination="xXe-9B-urR" id="BvR-nX-d5g"/>
+                        <outlet property="NoteImage" destination="fQl-b1-W9G" id="3jF-wE-pOS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aph-cu-Il8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ZqR-Es-zE9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2455" y="540"/>
+            <point key="canvasLocation" x="2453.6231884057975" y="539.0625"/>
         </scene>
     </scenes>
     <resources>

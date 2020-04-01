@@ -16,10 +16,7 @@ class NotesViewController : UITableViewController {
     @IBAction func addNewNotes(_ sender: Any) {
         // Create a new Item and add it to the store
         let newText = "New Note"
-        print("Button Pressed")
-        
-        
-        
+
         let newItem = NotesStore.createItem(name: newText, desc: newText, image: nil)// Figure out where that item is in the array
         
         if let index = NotesStore.allItems.firstIndex(of: newItem) {
