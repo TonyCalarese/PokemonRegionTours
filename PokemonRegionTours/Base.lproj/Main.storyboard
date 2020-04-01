@@ -62,7 +62,7 @@
         <!--Destinations-->
         <scene sceneID="JDu-A8-mp0">
             <objects>
-                <tableViewController id="JkG-Pi-86O" userLabel="Destinations" customClass="DestinationsViewController" customModule="PokemonRegionTours" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Destinations" id="JkG-Pi-86O" userLabel="Destinations" customClass="DestinationsViewController" customModule="PokemonRegionTours" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="okM-Oj-xJP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
                                 <connections>
                                     <outlet property="icon" destination="ls7-Pe-BnR" id="pA3-oP-UDi"/>
                                     <outlet property="title" destination="9aF-h2-VQA" id="TfI-7f-Icv"/>
-                                    <segue destination="Skn-lg-LU3" kind="show" id="YrK-ee-q16"/>
+                                    <segue destination="Skn-lg-LU3" kind="show" identifier="showDest" id="YrK-ee-q16"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="1687" y="-788"/>
         </scene>
-        <!--View Controller-->
+        <!--Destination Detail View Controller-->
         <scene sceneID="qqO-bS-T3l">
             <objects>
-                <viewController id="Skn-lg-LU3" sceneMemberID="viewController">
+                <viewController id="Skn-lg-LU3" customClass="DestinationDetailViewController" customModule="PokemonRegionTours" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gKe-Df-YXw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,6 +187,12 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                         <viewLayoutGuide key="safeArea" id="EMe-av-xd5"/>
                     </view>
                     <navigationItem key="navigationItem" id="YdV-Hi-lAL"/>
+                    <connections>
+                        <outlet property="destDesc" destination="Inj-c1-15X" id="p6c-Ww-2EJ"/>
+                        <outlet property="destTitle" destination="gmZ-2H-cWH" id="pmQ-Oi-WSz"/>
+                        <outlet property="location" destination="VUX-R0-nbY" id="jMD-UA-kNi"/>
+                        <outlet property="photo" destination="eus-cZ-gle" id="TiI-pE-2iD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTY-t9-sfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -414,7 +420,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
         <!--Destinations-->
         <scene sceneID="8Y4-3m-XA8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PLk-2Y-Exs" sceneMemberID="viewController">
+                <navigationController title="Destinations" automaticallyAdjustsScrollViewInsets="NO" id="PLk-2Y-Exs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Destinations" image="map" catalog="system" selectedImage="map.fill" id="ba4-MR-BJY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iC5-6E-hbV">

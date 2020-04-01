@@ -12,11 +12,24 @@ class DestinationsViewController: UITableViewController {
     
     var destStore = ItemStore<Destination>()
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showDest":
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let dest = destStore.allItems[row]
+                let vc = segue.destination as! DestinationDetailViewController
+                vc.destination = dest
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if !destStore.loadItems(from: "test") {
+        if !destStore.loadItems(from: "destinations") {
             print("Items did not load!")
         }
     }
@@ -41,7 +54,6 @@ class DestinationsViewController: UITableViewController {
         
         return cell
     }
-
-
+    
 }
 

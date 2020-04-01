@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Pikachu</string>
+		<key>desc</key>
+		<string>Found at Fleming Museam of Art on UVM&apos;s Campus.
+
+ Pikachu is an Electric-type Pokémon introduced in Generation I. It evolves from Pichu when leveled up with high friendship and evolves into Raichu when exposed to a Thunder Stone. Pikachu has a Gigantamax form. In Alola, Pikachu will evolve into Alolan Raichu when exposed to a Thunder Stone. In Pokémon Yellow, the starter Pikachu will refuse to evolve into Raichu unless it is traded and evolved on another save file. Pikachu is popularly known as the mascot of the Pokémon franchise and a major representative of Nintendo&apos;s collective mascots.
+
+It is also the game mascot and starter Pokémon of Pokémon Yellow and Pokémon: Let&apos;s Go, Pikachu!. It has made numerous appearances on the boxes of spin-off titles.
+</string>
+		<key>image</key>
+		<string>Pikachu</string>
+		<key>lat</key>
+		<real>44.479288</real>
+		<key>long</key>
+		<real>-73.19683000000001</real>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eevee</string>
+		<key>desc</key>
+		<string>Found at North Beach Park.
+
+It evolves into one of eight different Pokémon through various methods. The Evolutions are: Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, and Sylveon.
+
+Eevee is the game mascot and starter Pokémon in Pokémon: Let&apos;s Go, Eevee!, as well as for the main characters of Pokémon XD: Gale of Darkness and Pokémon Conquest. It is also the rival&apos;s starter Pokémon in Pokémon Yellow, although Professor Oak originally intended to give it to the player.</string>
+		<key>image</key>
+		<string>Eevee</string>
+		<key>lat</key>
+		<real>44.4927389</real>
+		<key>long</key>
+		<real>-73.2403837</real>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Magikarp</string>
+		<key>desc</key>
+		<string>Found at Champlain Valley Expo.
+
+is a Water-type Pokémon introduced in Generation I.
+
+It evolves into Gyarados starting at level 20.</string>
+		<key>image</key>
+		<string>Magikarp</string>
+		<key>lat</key>
+		<real>44.4961895</real>
+		<key>long</key>
+		<real>-73.1272256</real>
+	</dict>
+</array>
+</plist>

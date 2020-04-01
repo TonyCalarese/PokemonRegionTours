@@ -19,7 +19,7 @@
 		E9DDE2A724006C2800C46E20 /* PokemonRegionToursTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDE2A624006C2800C46E20 /* PokemonRegionToursTests.swift */; };
 		E9DDE2B224006C2800C46E20 /* PokemonRegionToursUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDE2B124006C2800C46E20 /* PokemonRegionToursUITests.swift */; };
 		FB443D5924300EDB007593AA /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB443D5824300EDB007593AA /* ItemStore.swift */; };
-		FB443D5B2430145F007593AA /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB443D5A2430145F007593AA /* test.plist */; };
+		FB443D5B2430145F007593AA /* destinations.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB443D5A2430145F007593AA /* destinations.plist */; };
 		FB4968A8242FFB49007E296A /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4968A7242FFB49007E296A /* Destination.swift */; };
 		FB4968AA242FFC79007E296A /* Itemable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4968A9242FFC79007E296A /* Itemable.swift */; };
 		FB63A4792423D55C00EAB96B /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB63A4782423D55C00EAB96B /* NotesViewController.swift */; };
@@ -27,6 +27,7 @@
 		FB63A47D2423D59800EAB96B /* ExternalLinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB63A47C2423D59800EAB96B /* ExternalLinksViewController.swift */; };
 		FB63A47F2423D5AE00EAB96B /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB63A47E2423D5AE00EAB96B /* CreditsViewController.swift */; };
 		FB63A482242D4CFB00EAB96B /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB63A481242D4CFB00EAB96B /* ImageTableViewCell.swift */; };
+		FBF0F641243408EB00BB2932 /* DestinationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF0F640243408EB00BB2932 /* DestinationDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +66,7 @@
 		E9DDE2B124006C2800C46E20 /* PokemonRegionToursUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRegionToursUITests.swift; sourceTree = "<group>"; };
 		E9DDE2B324006C2800C46E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB443D5824300EDB007593AA /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
-		FB443D5A2430145F007593AA /* test.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = test.plist; sourceTree = "<group>"; };
+		FB443D5A2430145F007593AA /* destinations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = destinations.plist; sourceTree = "<group>"; };
 		FB4968A7242FFB49007E296A /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		FB4968A9242FFC79007E296A /* Itemable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itemable.swift; sourceTree = "<group>"; };
 		FB63A4782423D55C00EAB96B /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		FB63A47C2423D59800EAB96B /* ExternalLinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLinksViewController.swift; sourceTree = "<group>"; };
 		FB63A47E2423D5AE00EAB96B /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		FB63A481242D4CFB00EAB96B /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		FBF0F640243408EB00BB2932 /* DestinationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +143,7 @@
 				E9DDE29D24006C2800C46E20 /* Info.plist */,
 				FB63A4802423D62F00EAB96B /* ViewControllers */,
 				C0921625243156A7009C069A /* TableViewCells */,
-				FB443D5A2430145F007593AA /* test.plist */,
+				FB443D5A2430145F007593AA /* destinations.plist */,
 			);
 			path = PokemonRegionTours;
 			sourceTree = "<group>";
@@ -178,7 +180,7 @@
 		FB63A4802423D62F00EAB96B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E9DDE29124006C2800C46E20 /* DestinationsViewController.swift */,
+				FBF0F63F2434084F00BB2932 /* Destinations */,
 				E9DDE29324006C2800C46E20 /* ToursViewContoller.swift */,
 				FB63A4782423D55C00EAB96B /* NotesViewController.swift */,
 				FB63A47A2423D57A00EAB96B /* FavoritesViewController.swift */,
@@ -186,6 +188,15 @@
 				FB63A47E2423D5AE00EAB96B /* CreditsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FBF0F63F2434084F00BB2932 /* Destinations */ = {
+			isa = PBXGroup;
+			children = (
+				E9DDE29124006C2800C46E20 /* DestinationsViewController.swift */,
+				FBF0F640243408EB00BB2932 /* DestinationDetailViewController.swift */,
+			);
+			path = Destinations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB443D5B2430145F007593AA /* test.plist in Resources */,
+				FB443D5B2430145F007593AA /* destinations.plist in Resources */,
 				E9DDE29C24006C2800C46E20 /* LaunchScreen.storyboard in Resources */,
 				E9DDE29924006C2800C46E20 /* Assets.xcassets in Resources */,
 				E9DDE29724006C2800C46E20 /* Main.storyboard in Resources */,
@@ -333,6 +344,7 @@
 				E9DDE28E24006C2800C46E20 /* AppDelegate.swift in Sources */,
 				FB63A47B2423D57A00EAB96B /* FavoritesViewController.swift in Sources */,
 				FB63A47D2423D59800EAB96B /* ExternalLinksViewController.swift in Sources */,
+				FBF0F641243408EB00BB2932 /* DestinationDetailViewController.swift in Sources */,
 				E9DDE29024006C2800C46E20 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
