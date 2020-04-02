@@ -17,7 +17,7 @@ class NotesDetailViewController: UIViewController, UIImagePickerControllerDelega
     var imagePicker = UIImagePickerController()
     
     
-    @IBOutlet weak var FavoriteButton: UIBarButtonItem!
+    @IBOutlet weak var FavoriteButton: UIButton!
     @IBOutlet weak var ImageButton: UIButton!
     @IBOutlet weak var NoteTitle: UITextField!
     @IBOutlet weak var NotesImage: UIImageView!
@@ -64,9 +64,18 @@ class NotesDetailViewController: UIViewController, UIImagePickerControllerDelega
    
     
     @IBAction func FavoritePage(_ sender: UIButton) {
+        favoriteItem()
     }
     
     
+    func favoriteItem(){
+        if notes?.favorite == false{
+            FavoriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        }else{
+            FavoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+        }
+        notes?.favorite = !(notes?.favorite ?? false) //default to false just in case
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,12 +95,15 @@ class NotesDetailViewController: UIViewController, UIImagePickerControllerDelega
             NotesImage.image = image
         }
         
-        
+        //favoriteItem()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         if let body = BodyText.text {
             notes?.desc = body
+        }
+        if let fave = notes?.favorite {
+            notes?.favorite = fave
         }
     }
 
