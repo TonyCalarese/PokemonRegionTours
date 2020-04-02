@@ -11,6 +11,7 @@ import UIKit
 class LinksTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var Pokémon: UILabel!
     @IBOutlet weak var Hyperlink: UIButton!
     //Reference of opening link in safari: https://www.hackingwithswift.com/example-code/system/how-to-open-a-url-in-safari]
     @IBAction func GoToSite(_ sender: UIButton) {

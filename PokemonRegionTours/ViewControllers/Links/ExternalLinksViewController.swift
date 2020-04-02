@@ -10,7 +10,7 @@ import UIKit
 
 class ExternalLinksViewController : UITableViewController {
 
-    
+    let pokemon = ["Pikachu", "Eevee", "Magikarp"]
     let links = ["https://www.pokemon.com/us/pokedex/pikachu",
         "https://www.pokemon.com/us/pokedex/eevee",
         "https://pokemondb.net/pokedex/magikarp"]
@@ -40,10 +40,11 @@ class ExternalLinksViewController : UITableViewController {
         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             // Create an instance of UITableViewCell, with default appearance
             let cell = tableView.dequeueReusableCell(withIdentifier: "linkCell", for: indexPath) as! LinksTableViewCell
-            
+        
+            let poke = pokemon[indexPath.row]
             let item = links[indexPath.row]
         cell.Hyperlink.setTitle(item, for: .normal)
-    
+        cell.Pokémon.text = poke
             return cell
     }
 
