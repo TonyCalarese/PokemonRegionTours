@@ -9,13 +9,13 @@
 import UIKit
 
 class LinksTableViewCell: UITableViewCell {
-
     
-    @IBOutlet weak var Pokémon: UILabel!
-    @IBOutlet weak var Hyperlink: UIButton!
+    var website = ""
+    @IBOutlet weak var Pokémon: UIButton!
     //Reference of opening link in safari: https://www.hackingwithswift.com/example-code/system/how-to-open-a-url-in-safari]
+    
     @IBAction func GoToSite(_ sender: UIButton) {
-        if let url = URL(string: sender.titleLabel!.text!) {
+        if let url = URL(string: website) {
             UIApplication.shared.open(url)
         }
     }

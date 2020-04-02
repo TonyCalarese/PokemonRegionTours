@@ -43,8 +43,9 @@ class ExternalLinksViewController : UITableViewController {
         
             let poke = pokemon[indexPath.row]
             let item = links[indexPath.row]
-        cell.Hyperlink.setTitle(item, for: .normal)
-        cell.Pokémon.text = poke
+        cell.Pokémon.setTitle(poke, for: .normal)
+        
+        cell.website = item
             return cell
     }
 

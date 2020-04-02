@@ -113,7 +113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RME-el-JB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1687" y="-788"/>
+            <point key="canvasLocation" x="1604" y="-150"/>
         </scene>
         <!--Destination Detail View Controller-->
         <scene sceneID="qqO-bS-T3l">
@@ -197,7 +197,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTY-t9-sfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2429" y="-788"/>
+            <point key="canvasLocation" x="2291" y="-150"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -210,7 +210,6 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                     </tabBar>
                     <connections>
                         <segue destination="PLk-2Y-Exs" kind="relationship" relationship="viewControllers" id="a5t-gx-tmF"/>
-                        <segue destination="Yjn-32-8fL" kind="relationship" relationship="viewControllers" id="pj4-yY-Qqn"/>
                         <segue destination="6lf-1p-eLj" kind="relationship" relationship="viewControllers" id="txM-ah-i3G"/>
                         <segue destination="HX6-KW-7e4" kind="relationship" relationship="viewControllers" id="71c-C7-fgj"/>
                         <segue destination="1DB-wR-BTw" kind="relationship" relationship="viewControllers" id="4b7-b2-Itb"/>
@@ -218,36 +217,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-454" y="1917"/>
-        </scene>
-        <!--Tours-->
-        <scene sceneID="LQd-yo-q7j">
-            <objects>
-                <tableViewController id="JeW-5t-oEc" userLabel="Tours" customClass="ToursViewContoller" customModule="PokemonRegionTours" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kCi-mP-DI5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Vda-v9-Odn">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vda-v9-Odn" id="GXd-V4-dfc" customClass="NotesTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="JeW-5t-oEc" id="uJD-m2-0Zq"/>
-                            <outlet property="delegate" destination="JeW-5t-oEc" id="7Xc-ad-lBS"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="o9Y-M0-Bpg"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p6U-Gh-eBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1686.9565217391305" y="-133.25892857142856"/>
+            <point key="canvasLocation" x="-336" y="1917"/>
         </scene>
         <!--Links-->
         <scene sceneID="R5W-fY-5Q2">
@@ -258,25 +228,17 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="linkCell" rowHeight="84" id="vdq-LA-g6Z" customClass="LinksTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="84"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="linkCell" rowHeight="56" id="vdq-LA-g6Z" customClass="LinksTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vdq-LA-g6Z" id="Kys-fU-fDC" customClass="LinksTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pokémon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKj-HU-0mE">
-                                            <rect key="frame" x="20" y="8" width="144" height="22"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                            <nil key="textColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuM-Ue-jQl">
-                                            <rect key="frame" x="20" y="38" width="74" height="29"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuM-Ue-jQl">
+                                            <rect key="frame" x="20" y="0.5" width="74" height="42"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <state key="normal" title="Link">
-                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <connections>
@@ -285,18 +247,13 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="vKj-HU-0mE" firstAttribute="top" secondItem="Kys-fU-fDC" secondAttribute="top" constant="11" id="KeA-cP-hu9"/>
                                         <constraint firstAttribute="trailing" secondItem="FuM-Ue-jQl" secondAttribute="trailing" constant="320" id="Msk-N4-MrX"/>
                                         <constraint firstItem="FuM-Ue-jQl" firstAttribute="leading" secondItem="Kys-fU-fDC" secondAttribute="leading" constant="20" id="Ok6-vQ-FJq"/>
-                                        <constraint firstItem="FuM-Ue-jQl" firstAttribute="top" secondItem="vKj-HU-0mE" secondAttribute="bottom" constant="8" id="Qry-o9-vst"/>
-                                        <constraint firstItem="vKj-HU-0mE" firstAttribute="leading" secondItem="Kys-fU-fDC" secondAttribute="leading" constant="20" id="Wmh-Ua-QiH"/>
-                                        <constraint firstItem="vKj-HU-0mE" firstAttribute="centerY" secondItem="Kys-fU-fDC" secondAttribute="centerY" id="bmJ-Wc-4h7"/>
                                         <constraint firstAttribute="bottom" secondItem="FuM-Ue-jQl" secondAttribute="bottom" constant="13.5" id="lI2-kS-JiQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="Hyperlink" destination="FuM-Ue-jQl" id="Adk-Tz-OrE"/>
-                                    <outlet property="Pokémon" destination="vKj-HU-0mE" id="9sl-2a-idH"/>
+                                    <outlet property="Pokémon" destination="FuM-Ue-jQl" id="Adk-Tz-OrE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -308,8 +265,9 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                     <navigationItem key="navigationItem" id="D4Z-y0-x8v">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ONB-bW-aVC">
+                            <rect key="frame" x="163.5" y="7" width="87" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Credits"/>
+                            <state key="normal" title="View Credits"/>
                             <connections>
                                 <segue destination="4mL-2D-BIq" kind="show" id="Y3J-s3-8HU"/>
                             </connections>
@@ -451,25 +409,6 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
             </objects>
             <point key="canvasLocation" x="922" y="541"/>
         </scene>
-        <!--Tours-->
-        <scene sceneID="Rnv-xT-K8y">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yjn-32-8fL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tours" image="video" catalog="system" selectedImage="video.fill" id="FXA-Zw-vez"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cB1-43-co3">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="JeW-5t-oEc" kind="relationship" relationship="rootViewController" id="FjC-Es-jmK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5ba-Rc-ib7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="922" y="-133"/>
-        </scene>
         <!--Destinations-->
         <scene sceneID="8Y4-3m-XA8">
             <objects>
@@ -487,7 +426,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XrE-SQ-YBI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="923" y="-788"/>
+            <point key="canvasLocation" x="922" y="-150"/>
         </scene>
         <!--Notes Detail View Controller-->
         <scene sceneID="j6W-xo-0D8">
@@ -570,7 +509,5 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
-        <image name="video" catalog="system" width="128" height="83"/>
-        <image name="video.fill" catalog="system" width="128" height="82"/>
     </resources>
 </document>
