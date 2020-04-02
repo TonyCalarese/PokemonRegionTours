@@ -258,15 +258,28 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vdq-LA-g6Z">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="linkCell" id="vdq-LA-g6Z" customClass="LinksTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vdq-LA-g6Z" id="Kys-fU-fDC">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vdq-LA-g6Z" id="Kys-fU-fDC" customClass="LinksTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FuM-Ue-jQl">
+                                            <rect key="frame" x="192" y="7" width="30" height="30"/>
+                                            <state key="normal" title="Link"/>
+                                            <connections>
+                                                <action selector="GoToSite:" destination="vdq-LA-g6Z" eventType="touchUpInside" id="lOy-hZ-i34"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FuM-Ue-jQl" firstAttribute="centerX" secondItem="Kys-fU-fDC" secondAttribute="centerX" id="YC3-xg-4mi"/>
+                                        <constraint firstItem="FuM-Ue-jQl" firstAttribute="centerY" secondItem="Kys-fU-fDC" secondAttribute="centerY" id="b3z-hd-Lz1"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="4mL-2D-BIq" kind="show" id="9L5-IE-APX"/>
+                                    <outlet property="Hyperlink" destination="FuM-Ue-jQl" id="Adk-Tz-OrE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -275,7 +288,17 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                             <outlet property="delegate" destination="Njm-L5-EQa" id="F7a-Vp-ccC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="D4Z-y0-x8v"/>
+                    <navigationItem key="navigationItem" id="D4Z-y0-x8v">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ONB-bW-aVC">
+                            <rect key="frame" x="182" y="7" width="50" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Credits"/>
+                            <connections>
+                                <segue destination="4mL-2D-BIq" kind="show" id="Y3J-s3-8HU"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m17-jz-PMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,14 +311,42 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                     <view key="view" contentMode="scaleToFill" id="2W2-fL-e5R">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="V 1.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbg-8Q-Fvt">
+                                <rect key="frame" x="179" y="347" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Created by Tony Calarese and Nick Garvey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2D-Bl-Ma7">
+                                <rect key="frame" x="41" y="488" width="326" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pokémon Region Tours" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLi-P5-FsF">
+                                <rect key="frame" x="35" y="95" width="345" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JLi-P5-FsF" firstAttribute="top" secondItem="BKB-Cp-QYY" secondAttribute="top" constant="94" id="D4u-d6-oQ2"/>
+                            <constraint firstItem="b2D-Bl-Ma7" firstAttribute="top" secondItem="mbg-8Q-Fvt" secondAttribute="bottom" constant="75" id="D9o-gk-tZy"/>
+                            <constraint firstItem="mbg-8Q-Fvt" firstAttribute="centerY" secondItem="BKB-Cp-QYY" secondAttribute="centerY" id="FmG-R7-CYP"/>
+                            <constraint firstItem="mbg-8Q-Fvt" firstAttribute="centerX" secondItem="BKB-Cp-QYY" secondAttribute="centerX" id="POF-DX-1TR"/>
+                            <constraint firstItem="JLi-P5-FsF" firstAttribute="centerX" secondItem="BKB-Cp-QYY" secondAttribute="centerX" id="ZWe-fx-nj8"/>
+                            <constraint firstItem="b2D-Bl-Ma7" firstAttribute="centerX" secondItem="BKB-Cp-QYY" secondAttribute="centerX" id="a6K-Uv-XZu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BKB-Cp-QYY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Di3-wV-zLV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DkJ-hA-7P1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2429" y="1917"/>
+            <point key="canvasLocation" x="2428.985507246377" y="1916.5178571428571"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="Vhw-fX-UJu">

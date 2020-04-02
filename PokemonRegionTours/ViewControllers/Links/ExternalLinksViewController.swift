@@ -10,10 +10,12 @@ import UIKit
 
 class ExternalLinksViewController : UITableViewController {
 
-    let links: url = ["https://www.pokemon.com/us/pokedex/pikachu",
+    
+    let links = ["https://www.pokemon.com/us/pokedex/pikachu",
         "https://www.pokemon.com/us/pokedex/eevee",
         "https://pokemondb.net/pokedex/magikarp"]
     
+    let displayed_text = ["Pikachu", "Eevee", "Magikarp"]
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,31 +33,19 @@ class ExternalLinksViewController : UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return NotesStore.allItems.count
+        return links.count
     }
     
     override func tableView(_ tableView: UITableView,
         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             // Create an instance of UITableViewCell, with default appearance
-            let cell = tableView.dequeueReusableCell(withIdentifier: "notesCell", for: indexPath) as! NotesTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "linkCell", for: indexPath) as! LinksTableViewCell
             
-            let item = NotesStore.allItems[indexPath.row]
-            cell.nameLabel.text = item.name
+            let item = links[indexPath.row]
+        cell.Hyperlink.setTitle(item, for: .normal)
     
             return cell
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "noteDetailView":
-            if let row = tableView.indexPathForSelectedRow?.row {
-                let notes = NotesStore.allItems[row]
-                let vc = segue.destination as! NotesDetailViewController
-                vc.notes = notes
-            }
-        default:
-            preconditionFailure("Unexpected segue identifier")
-        }
-    }
+
 
 }
