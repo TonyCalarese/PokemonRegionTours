@@ -8,19 +8,82 @@
 
 import UIKit
 
-class NotesDetailViewController: UIViewController {
-
-    @IBAction func NoteTitle(_ sender: Any) {
+class NotesDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+    var notes: Notes? = nil
+    
+    //source of image picker: https://stackoverflow.com/questions/25510081/how-to-allow-user-to-pick-the-image-with-swift
+    var imageString: String = "Eevee"
+    var imagePicker = UIImagePickerController()
+    
+    @IBOutlet weak var ImageButton: UIButton!
+    @IBOutlet weak var NoteTitle: UITextField!
+    @IBOutlet weak var NotesImage: UIImageView!
+    @IBOutlet weak var BodyText: UITextView!
+    
+    @IBAction func UpdateNotesTitle(_ sender: UITextField) {
+        if let title = sender.text {
+            notes?.name = title
+        }
+        else{
+            sender.text = "New Note"
+        }
     }
     
-    @IBOutlet weak var NoteImage: UIImageView!
-    
-    @IBOutlet weak var BodyText: UITextView!
+    /* begin of source for image picker */
+    @IBAction func uploadImage(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+                   print("Button capture")
+
+                   imagePicker.delegate = self
+                   imagePicker.sourceType = .savedPhotosAlbum
+                   imagePicker.allowsEditing = false
+
+                   present(imagePicker, animated: true, completion: nil)
+               }
+    }
+   
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print("Image got")
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+                return
+            }
+        guard let imageURL = info[UIImagePickerController.InfoKey.imageURL] as? URL else {
+                return
+            }
+        notes?.image = imageURL.absoluteString
+        NotesImage.image = image
+        picker.dismiss(animated: true) {
+            
+        }
+        
+    }
+    // of image picker source
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //Set the Default data
+        if let userNotes = notes{
+            NoteTitle.text = userNotes.name
+            if let img = userNotes.image {
+                NotesImage.image = UIImage(named: img)
+            }
+        
+            BodyText.text = userNotes.desc
+        }
+        
+        if let filePath = Bundle.main.path(forResource: notes?.image, ofType: "jpg"), let image = UIImage(contentsOfFile: filePath) {
+            NotesImage.contentMode = .scaleAspectFit
+            NotesImage.image = image
+        }
+        
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if let body = BodyText.text {
+            notes?.desc = body
+        }
     }
 
 
