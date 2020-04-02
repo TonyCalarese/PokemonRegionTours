@@ -48,8 +48,9 @@ class NotesDetailViewController: UIViewController, UIImagePickerControllerDelega
                 return
             }
         guard let imageURL = info[UIImagePickerController.InfoKey.imageURL] as? URL else {
-            return
-        }
+                return
+            }
+        notes?.image = imageURL.absoluteString
         NotesImage.image = image
         picker.dismiss(animated: true) {
             
@@ -71,16 +72,17 @@ class NotesDetailViewController: UIViewController, UIImagePickerControllerDelega
             BodyText.text = userNotes.desc
         }
         
+        if let filePath = Bundle.main.path(forResource: notes?.image, ofType: "jpg"), let image = UIImage(contentsOfFile: filePath) {
+            NotesImage.contentMode = .scaleAspectFit
+            NotesImage.image = image
+        }
+        
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         if let body = BodyText.text {
             notes?.desc = body
-        }
-        if let image = NotesImage.image {
-      //      UIImage(contentsOfFile: String)
-      //      notes?.image = image
         }
     }
 

@@ -1,5 +1,5 @@
 //
-//  ExternalLinksViewController.swift
+//  CreditsViewController.swift
 //  PokemonRegionTours
 //
 //  Created by Nick Garvey and Tony Calarese on 3/19/20.
@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ExternalLinksViewController : UITableViewController {
+class CreditsViewController : UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
