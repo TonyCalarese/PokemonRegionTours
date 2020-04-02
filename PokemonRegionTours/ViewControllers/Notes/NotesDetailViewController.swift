@@ -28,6 +28,7 @@ class NotesDetailViewController: UIViewController, UIImagePickerControllerDelega
             sender.text = "New Note"
         }
     }
+    
     /* begin of source for image picker */
     @IBAction func uploadImage(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
@@ -39,13 +40,19 @@ class NotesDetailViewController: UIViewController, UIImagePickerControllerDelega
 
                    present(imagePicker, animated: true, completion: nil)
                }
-        
-        func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
-            self.dismiss(animated: true, completion: { () -> Void in
-
-            })
-
-            NotesImage.image = image
+    }
+   
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print("Image got")
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+                return
+            }
+        guard let imageURL = info[UIImagePickerController.InfoKey.imageURL] as? URL else {
+            return
+        }
+        NotesImage.image = image
+        picker.dismiss(animated: true) {
+            
         }
         
     }
