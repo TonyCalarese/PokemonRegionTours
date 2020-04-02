@@ -430,49 +430,55 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQl-b1-W9G">
-                                <rect key="frame" x="75" y="175" width="264" height="150"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FbL-Yh-xyz">
-                                <rect key="frame" x="94" y="111" width="213" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sample Text" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="22" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FbL-Yh-xyz">
+                                <rect key="frame" x="111" y="108" width="180" height="44.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="NoteTitle:" destination="69q-hH-9PH" eventType="editingDidEnd" id="ZSO-Nq-SZI"/>
-                                    <action selector="NoteTitle:" destination="ZqR-Es-zE9" eventType="editingDidEnd" id="qqG-bY-76X"/>
+                                    <action selector="UpdateNotesTitle:" destination="69q-hH-9PH" eventType="editingDidEnd" id="cfR-oh-HWP"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xXe-9B-urR">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xXe-9B-urR">
                                 <rect key="frame" x="20" y="363" width="374" height="381"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="GcX-f2-iTy"/>
+                                    <constraint firstAttribute="height" constant="381" id="yed-32-zqJ"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BDg-Zd-X1V">
+                                <rect key="frame" x="97" y="200" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="xXe-9B-urR" firstAttribute="centerX" secondItem="ZsQ-Yz-YcS" secondAttribute="centerX" id="0y5-5f-06j"/>
-                            <constraint firstItem="FbL-Yh-xyz" firstAttribute="top" secondItem="ZsQ-Yz-YcS" secondAttribute="top" constant="23" id="9Um-2d-W1u"/>
-                            <constraint firstItem="fQl-b1-W9G" firstAttribute="centerX" secondItem="ZsQ-Yz-YcS" secondAttribute="centerX" id="AZ2-Ok-dkU"/>
-                            <constraint firstItem="fQl-b1-W9G" firstAttribute="top" secondItem="FbL-Yh-xyz" secondAttribute="bottom" constant="30" id="Mc5-dY-b19"/>
-                            <constraint firstItem="ZsQ-Yz-YcS" firstAttribute="bottom" secondItem="xXe-9B-urR" secondAttribute="bottom" constant="20" id="SFF-DL-P0z"/>
-                            <constraint firstItem="ZsQ-Yz-YcS" firstAttribute="trailing" secondItem="FbL-Yh-xyz" secondAttribute="trailing" constant="107" id="u92-wy-77T"/>
-                            <constraint firstItem="FbL-Yh-xyz" firstAttribute="leading" secondItem="ZsQ-Yz-YcS" secondAttribute="leading" constant="275" id="zBr-B4-FIW"/>
-                            <constraint firstItem="xXe-9B-urR" firstAttribute="top" secondItem="fQl-b1-W9G" secondAttribute="bottom" constant="38" id="zsP-fA-BgM"/>
+                            <constraint firstItem="BDg-Zd-X1V" firstAttribute="top" secondItem="FbL-Yh-xyz" secondAttribute="bottom" constant="47.5" id="7L8-Xr-47b"/>
+                            <constraint firstItem="ZsQ-Yz-YcS" firstAttribute="trailing" secondItem="xXe-9B-urR" secondAttribute="trailing" constant="20" id="9KD-1o-4bK"/>
+                            <constraint firstItem="FbL-Yh-xyz" firstAttribute="top" secondItem="ZsQ-Yz-YcS" secondAttribute="top" constant="20" id="F3N-q9-wWA"/>
+                            <constraint firstItem="BDg-Zd-X1V" firstAttribute="leading" secondItem="ZsQ-Yz-YcS" secondAttribute="leading" constant="97" id="PUK-Bs-Ci4"/>
+                            <constraint firstItem="xXe-9B-urR" firstAttribute="top" secondItem="FbL-Yh-xyz" secondAttribute="bottom" constant="210.5" id="Saw-JA-dNg"/>
+                            <constraint firstItem="FbL-Yh-xyz" firstAttribute="leading" secondItem="ZsQ-Yz-YcS" secondAttribute="leading" constant="111" id="cCw-G2-VGW"/>
+                            <constraint firstItem="ZsQ-Yz-YcS" firstAttribute="bottom" secondItem="xXe-9B-urR" secondAttribute="bottom" constant="20" id="o4r-dz-lsV"/>
+                            <constraint firstItem="ZsQ-Yz-YcS" firstAttribute="trailing" secondItem="BDg-Zd-X1V" secondAttribute="trailing" constant="77" id="u6m-XS-fyZ"/>
+                            <constraint firstItem="ZsQ-Yz-YcS" firstAttribute="trailing" secondItem="FbL-Yh-xyz" secondAttribute="trailing" constant="123" id="xpm-s9-l5U"/>
+                            <constraint firstItem="xXe-9B-urR" firstAttribute="top" secondItem="BDg-Zd-X1V" secondAttribute="bottom" constant="35" id="xxg-QM-0yi"/>
+                            <constraint firstItem="xXe-9B-urR" firstAttribute="leading" secondItem="ZsQ-Yz-YcS" secondAttribute="leading" constant="20" id="yfZ-dF-Ocp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZsQ-Yz-YcS"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y3Q-yl-RBz"/>
                     <connections>
                         <outlet property="BodyText" destination="xXe-9B-urR" id="BvR-nX-d5g"/>
-                        <outlet property="NoteImage" destination="fQl-b1-W9G" id="3jF-wE-pOS"/>
                         <outlet property="NoteTitle" destination="FbL-Yh-xyz" id="Ii2-TB-mAE"/>
+                        <outlet property="NotesImage" destination="BDg-Zd-X1V" id="9m4-X1-9em"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aph-cu-Il8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="ZqR-Es-zE9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2453.6231884057975" y="539.0625"/>
         </scene>
