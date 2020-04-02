@@ -10,14 +10,14 @@ import UIKit
 
 class DestinationsViewController: UITableViewController {
     
-    var destStore = ItemStore<Destination>()
+    var destStore = ItemStore()
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "showDest":
             if let row = tableView.indexPathForSelectedRow?.row {
-                let dest = destStore.allItems[row]
+                let dest = destStore.allItems[row] as! Destination
                 let vc = segue.destination as! DestinationDetailViewController
                 vc.destination = dest
             }
@@ -29,7 +29,7 @@ class DestinationsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if !destStore.loadItems(from: "destinations") {
+        if !destStore.loadItems(from: "destinations", of: Destination.self) {
             print("Items did not load!")
         }
     }

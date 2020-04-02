@@ -8,26 +8,28 @@
 
 import UIKit
 
-class ItemStore<Type: Itemable> {
-    var allItems = [Type]()
+class ItemStore {
+    var allItems: Array<Itemable> = [Itemable]()
     
-    @discardableResult func createItem() -> Type {
+    @discardableResult func createItem<Type: Itemable>() -> Type {
         let newItem = Type(name: "NewItem", desc: "NewItem", image: nil)
         
         allItems.append(newItem)
         
+        
         return newItem
     }
     
-    @discardableResult func createItem(name: String, desc: String, image: String?) -> Type {
-                let newItem = Type(name: name, desc: desc, image: image)
+    @discardableResult func createItem<Type: Itemable>(name: String, desc: String, image: String?, of type: Type) -> Itemable {
+        
+        let newItem = Type(name: name, desc: desc, image: image)
         
         allItems.append(newItem)
         
         return newItem
     }
     
-    func loadItems(from plist: String) -> Bool {
+    func loadItems<Type: Itemable>(from plist: String, of type: Type.Type) -> Bool {
         do {
             let url = Bundle.main.url(forResource: plist, withExtension: "plist")!
             let data = try Data(contentsOf: url)

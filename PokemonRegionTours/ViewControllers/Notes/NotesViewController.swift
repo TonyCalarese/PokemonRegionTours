@@ -11,19 +11,19 @@ import UIKit
 //Code is highly based off of the homepwner by Big Nerd Ranch © 2015
 class NotesViewController : UITableViewController {
 
-    var NotesStore = ItemStore<Notes>()
+    var NotesStore = ItemStore()
     
     @IBAction func addNewNotes(_ sender: Any) {
         // Create a new Item and add it to the store
         let newText = "New Note"
 
-        let newItem = NotesStore.createItem(name: newText, desc: newText, image: nil)// Figure out where that item is in the array
+        NotesStore.createItem(name: newText, desc: newText, image: nil, of: Notes(name: "", desc: "", image: nil))// Figure out where that item is in the array
         
-        if let index = NotesStore.allItems.firstIndex(of: newItem) {
-            let indexPath = IndexPath(row: index, section: 0)
-                               
-            tableView.insertRows(at: [indexPath], with: .automatic)
-        }
+        let index = NotesStore.allItems.count - 1
+        let indexPath = IndexPath(row: index, section: 0)
+                           
+        tableView.insertRows(at: [indexPath], with: .automatic)
+        
 
     }
 
