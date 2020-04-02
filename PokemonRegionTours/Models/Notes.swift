@@ -12,11 +12,13 @@ class Notes: NSObject, Itemable {
     var name: String
     var desc: String
     var image: String?
+    var favorite: Bool
     
-    required init(name: String, desc: String, image: String?) {
+    required init(name: String, desc: String, image: String?, favorite: Bool) {
         self.name = name
         self.desc = desc
         self.image = image
+        self.favorite = favorite
     }
     
     

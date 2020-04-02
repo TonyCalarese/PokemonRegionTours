@@ -14,6 +14,8 @@ It is also the game mascot and starter Pokémon of Pokémon Yellow and Pokémon:
 </string>
 		<key>image</key>
 		<string>Pikachu</string>
+		<key>favorite</key>
+		<false/>
 		<key>lat</key>
 		<real>44.479288</real>
 		<key>long</key>
@@ -30,6 +32,8 @@ It evolves into one of eight different Pokémon through various methods. The Evo
 Eevee is the game mascot and starter Pokémon in Pokémon: Let&apos;s Go, Eevee!, as well as for the main characters of Pokémon XD: Gale of Darkness and Pokémon Conquest. It is also the rival&apos;s starter Pokémon in Pokémon Yellow, although Professor Oak originally intended to give it to the player.</string>
 		<key>image</key>
 		<string>Eevee</string>
+		<key>favorite</key>
+		<false/>
 		<key>lat</key>
 		<real>44.4927389</real>
 		<key>long</key>
@@ -46,6 +50,8 @@ is a Water-type Pokémon introduced in Generation I.
 It evolves into Gyarados starting at level 20.</string>
 		<key>image</key>
 		<string>Magikarp</string>
+		<key>favorite</key>
+		<false/>
 		<key>lat</key>
 		<real>44.4961895</real>
 		<key>long</key>

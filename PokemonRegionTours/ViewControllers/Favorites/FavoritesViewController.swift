@@ -10,8 +10,11 @@ import UIKit
 
 class FavoritesViewController : UITableViewController {
     
+    let favStore: ItemStore = ItemStore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
 

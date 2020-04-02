@@ -14,13 +14,15 @@ class Destination: NSObject, Itemable, MKAnnotation {
         case name
         case desc
         case image
+        case favorite
         case lat
         case long
     }
-    required init(name: String, desc: String, image: String?) {
+    required init(name: String, desc: String, image: String?, favorite: Bool) {
         self.name = name
         self.desc = desc
         self.image = image
+        self.favorite = favorite
         coordinate = CLLocationCoordinate2D()
     }
     required init(from decoder: Decoder) throws {
@@ -28,6 +30,7 @@ class Destination: NSObject, Itemable, MKAnnotation {
         name = try values.decode(String.self, forKey: .name)
         desc = try values.decode(String.self, forKey: .desc)
         image = try values.decode(String.self, forKey: .image)
+        favorite = try values.decode(Bool.self, forKey: .favorite)
         let lat: Double = try values.decode(Double.self, forKey: .lat)
         let long: Double = try values.decode(Double.self, forKey: .long)
         coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
@@ -36,10 +39,11 @@ class Destination: NSObject, Itemable, MKAnnotation {
     var name: String
     var desc: String
     var image: String?
+    var favorite: Bool
     var coordinate: CLLocationCoordinate2D
     
     convenience init(name: String, desc: String, image: String?, coordinate: CLLocationCoordinate2D) {
-        self.init(name: name, desc: desc, image: image)
+        self.init(name: name, desc: desc, image: image, favorite: false)
         self.coordinate = coordinate
     }
     
@@ -51,6 +55,7 @@ class Destination: NSObject, Itemable, MKAnnotation {
         try container.encode(name, forKey: .name)
         try container.encode(desc, forKey: .desc)
         try container.encode(image, forKey: .image)
+        try container.encode(favorite, forKey: .favorite)
         try container.encode(coordinate.latitude, forKey: .lat)
         try container.encode(coordinate.longitude, forKey: .long)
     }

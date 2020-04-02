@@ -207,14 +207,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FB49799D2436A3DD00106E9C /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				FB63A47A2423D57A00EAB96B /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		FB63A4802423D62F00EAB96B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FB49799D2436A3DD00106E9C /* Favorites */,
 				C02AA6022436664000A1A17D /* Links */,
 				C02AA5FC243536CC00A1A17D /* Notes */,
 				FBF0F63F2434084F00BB2932 /* Destinations */,
 				E9DDE29324006C2800C46E20 /* ToursViewContoller.swift */,
-				FB63A47A2423D57A00EAB96B /* FavoritesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

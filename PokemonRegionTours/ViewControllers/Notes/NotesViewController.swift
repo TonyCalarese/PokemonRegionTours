@@ -17,7 +17,7 @@ class NotesViewController : UITableViewController {
         // Create a new Item and add it to the store
         let newText = "New Note"
 
-        NotesStore.createItem(name: newText, desc: newText, image: nil, of: Notes(name: "", desc: "", image: nil))// Figure out where that item is in the array
+        NotesStore.createItem(name: newText, desc: newText, image: nil, of: Notes(name: "", desc: "", image: nil, favorite: false))// Figure out where that item is in the array
         
         let index = NotesStore.allItems.count - 1
         let indexPath = IndexPath(row: index, section: 0)
@@ -62,7 +62,7 @@ class NotesViewController : UITableViewController {
             if let row = tableView.indexPathForSelectedRow?.row {
                 let notes = NotesStore.allItems[row]
                 let vc = segue.destination as! NotesDetailViewController
-                vc.notes = notes
+                vc.notes = notes as? Notes
             }
         default:
             preconditionFailure("Unexpected segue identifier")

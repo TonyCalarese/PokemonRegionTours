@@ -12,7 +12,8 @@ import UIKit
 protocol Itemable : Codable {
     var name: String { get set }
     var desc: String { get set }
+    var favorite: Bool { get set }
     var image: String? { get set }
     
-    init(name: String, desc: String, image: String?)
+    init(name: String, desc: String, image: String?, favorite: Bool)
 }
