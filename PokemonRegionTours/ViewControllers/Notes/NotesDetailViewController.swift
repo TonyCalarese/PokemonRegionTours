@@ -10,11 +10,14 @@ import UIKit
 
 class NotesDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     var notes: Notes? = nil
+    var fave: Bool = false
     
     //source of image picker: https://stackoverflow.com/questions/25510081/how-to-allow-user-to-pick-the-image-with-swift
     var imageString: String = "Eevee"
     var imagePicker = UIImagePickerController()
     
+    
+    @IBOutlet weak var FavoriteButton: UIBarButtonItem!
     @IBOutlet weak var ImageButton: UIButton!
     @IBOutlet weak var NoteTitle: UITextField!
     @IBOutlet weak var NotesImage: UIImageView!
@@ -58,6 +61,12 @@ class NotesDetailViewController: UIViewController, UIImagePickerControllerDelega
         
     }
     // of image picker source
+   
+    
+    @IBAction func FavoritePage(_ sender: UIButton) {
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
