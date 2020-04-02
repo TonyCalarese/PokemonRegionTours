@@ -463,17 +463,20 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                                     <action selector="uploadImage:" destination="69q-hH-9PH" eventType="touchUpInside" id="QYg-kO-5pX"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BDg-Zd-X1V">
-                                <rect key="frame" x="74" y="171" width="266" height="157"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BDg-Zd-X1V">
+                                <rect key="frame" x="98" y="172" width="210" height="154.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="RvR-PV-U7P" firstAttribute="centerX" secondItem="ZsQ-Yz-YcS" secondAttribute="centerX" id="2uX-N9-7a8"/>
+                            <constraint firstItem="ZsQ-Yz-YcS" firstAttribute="trailing" secondItem="BDg-Zd-X1V" secondAttribute="trailing" constant="106" id="6so-bM-xyS"/>
                             <constraint firstItem="ZsQ-Yz-YcS" firstAttribute="trailing" secondItem="xXe-9B-urR" secondAttribute="trailing" constant="20" id="9KD-1o-4bK"/>
                             <constraint firstItem="FbL-Yh-xyz" firstAttribute="top" secondItem="ZsQ-Yz-YcS" secondAttribute="top" constant="20" id="F3N-q9-wWA"/>
                             <constraint firstItem="xXe-9B-urR" firstAttribute="top" secondItem="RvR-PV-U7P" secondAttribute="bottom" constant="8" id="IqY-F1-wnl"/>
+                            <constraint firstItem="BDg-Zd-X1V" firstAttribute="leading" secondItem="ZsQ-Yz-YcS" secondAttribute="leading" constant="98" id="J9W-wY-7gK"/>
                             <constraint firstItem="BDg-Zd-X1V" firstAttribute="centerX" secondItem="ZsQ-Yz-YcS" secondAttribute="centerX" id="Orb-qL-YUz"/>
                             <constraint firstItem="RvR-PV-U7P" firstAttribute="top" secondItem="BDg-Zd-X1V" secondAttribute="bottom" constant="8" id="SLr-tE-BYd"/>
                             <constraint firstItem="xXe-9B-urR" firstAttribute="top" secondItem="FbL-Yh-xyz" secondAttribute="bottom" constant="210.5" id="Saw-JA-dNg"/>
@@ -486,9 +489,25 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZsQ-Yz-YcS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Y3Q-yl-RBz"/>
+                    <navigationItem key="navigationItem" id="Y3Q-yl-RBz">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="CUu-Dn-Sci">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RNj-Le-hxk">
+                                <rect key="frame" x="302" y="7" width="76" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="star" catalog="system">
+                                    <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="FavoritePage:" destination="69q-hH-9PH" eventType="touchUpInside" id="7kX-P0-TTu"/>
+                                </connections>
+                            </button>
+                            <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="BodyText" destination="xXe-9B-urR" id="BvR-nX-d5g"/>
+                        <outlet property="FavoriteButton" destination="CUu-Dn-Sci" id="v2y-SS-nGP"/>
                         <outlet property="ImageButton" destination="RvR-PV-U7P" id="Fbj-3r-n3g"/>
                         <outlet property="NoteTitle" destination="FbL-Yh-xyz" id="Ii2-TB-mAE"/>
                         <outlet property="NotesImage" destination="BDg-Zd-X1V" id="9m4-X1-9em"/>
@@ -502,6 +521,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
     <resources>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="doc.text.fill" catalog="system" width="115" height="128"/>
+        <image name="folder" catalog="system" width="128" height="95"/>
         <image name="link.circle" catalog="system" width="128" height="121"/>
         <image name="link.circle.fill" catalog="system" width="128" height="121"/>
         <image name="map" catalog="system" width="128" height="113"/>
