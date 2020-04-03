@@ -16,8 +16,12 @@ class FavoritesViewController : UITableViewController {
         return documents.appendingPathComponent("notes.plist")
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+<<<<<<< HEAD
+   
+=======
+>>>>>>> 0e92ba9c223114b5a07d4c42b3500794af456f6e
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         favStore.allItems = [Itemable]()
         let _ = favStore.loadItems(from: "destinations", of: Destination.self)
@@ -54,6 +58,10 @@ class FavoritesViewController : UITableViewController {
     
             return cell
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

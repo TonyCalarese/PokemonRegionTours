@@ -319,15 +319,23 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pokémon is owned by the Pokémon Company all rights reserved" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCN-nm-fP9">
+                                <rect key="frame" x="41" y="238" width="339" height="21"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="JLi-P5-FsF" firstAttribute="top" secondItem="BKB-Cp-QYY" secondAttribute="top" constant="94" id="D4u-d6-oQ2"/>
                             <constraint firstItem="b2D-Bl-Ma7" firstAttribute="top" secondItem="mbg-8Q-Fvt" secondAttribute="bottom" constant="75" id="D9o-gk-tZy"/>
                             <constraint firstItem="mbg-8Q-Fvt" firstAttribute="centerY" secondItem="BKB-Cp-QYY" secondAttribute="centerY" id="FmG-R7-CYP"/>
+                            <constraint firstItem="lCN-nm-fP9" firstAttribute="top" secondItem="JLi-P5-FsF" secondAttribute="bottom" constant="101" id="Oft-mY-jVp"/>
                             <constraint firstItem="mbg-8Q-Fvt" firstAttribute="centerX" secondItem="BKB-Cp-QYY" secondAttribute="centerX" id="POF-DX-1TR"/>
                             <constraint firstItem="JLi-P5-FsF" firstAttribute="centerX" secondItem="BKB-Cp-QYY" secondAttribute="centerX" id="ZWe-fx-nj8"/>
                             <constraint firstItem="b2D-Bl-Ma7" firstAttribute="centerX" secondItem="BKB-Cp-QYY" secondAttribute="centerX" id="a6K-Uv-XZu"/>
+                            <constraint firstItem="lCN-nm-fP9" firstAttribute="centerX" secondItem="BKB-Cp-QYY" secondAttribute="centerX" id="dYa-vJ-cSX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BKB-Cp-QYY"/>
                     </view>
