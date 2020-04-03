@@ -65,5 +65,19 @@ class ItemStore {
         
     }
     
+    func saveItems<Type: Itemable>(from plist: String, of type: Type.Type) {
+        
+        do {
+            let encoder = PropertyListEncoder()
+            
+            if let data = try? encoder.encode(allItems as! [Type]) {
+                let url = Bundle.main.url(forResource: plist, withExtension: "plist")
+                try data.write(to: url!)
+            }
+        } catch {
+            print("idk")
+        }
+    }
+    
    
 }

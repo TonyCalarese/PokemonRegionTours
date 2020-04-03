@@ -55,5 +55,9 @@ class DestinationsViewController: UITableViewController {
         return cell
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        destStore.saveItems(from: "destinations", of: Destination.self)
+    }
 }
 
