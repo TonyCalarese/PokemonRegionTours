@@ -15,7 +15,7 @@ class FavoritesViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        favStore.loadItems(from: "destinations", of: Destination.self)
+        let _ = favStore.loadItems(from: "destinations", of: Destination.self)
         favStore.allItems = favStore.allItems.filter({ $0.favorite })
     }
 
@@ -28,16 +28,43 @@ class FavoritesViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell") as! ImageTableViewCell
         
-        let dest = favStore.allItems[indexPath.row]
         
-        cell.title.text = dest.name
-        if let imgString = dest.image {
-            cell.icon.image = UIImage(named: imgString)
+        let item = favStore.allItems[indexPath.row]
+        
+        if item is Destination {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell") as! ImageTableViewCell
+            cell.title.text = item.name
+            if let imgString = item.image {
+                cell.icon.image = UIImage(named: imgString)
+            }
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "notesCell", for: indexPath) as! NotesTableViewCell
+            
+            cell.nameLabel.text = item.name
+    
+            return cell
         }
-        
-        return cell
+    }/Users/garveyn/Desktop/iOS Projects/PokemonRegionTours/PokemonRegionTours/ViewControllers/Favorites/FavoritesViewController.swift
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "notes":
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let notes = favStore.allItems[row]
+                let vc = segue.destination as! NotesDetailViewController
+                vc.notes = notes as? Notes
+            }
+        case "dest":
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let dest = favStore.allItems[row]
+                let vc = segue.destination as! DestinationDetailViewController
+                vc.destination = dest as? Destination
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
     }
 
 }

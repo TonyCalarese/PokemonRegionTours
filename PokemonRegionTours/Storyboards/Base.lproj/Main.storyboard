@@ -113,7 +113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RME-el-JB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1604" y="-150"/>
+            <point key="canvasLocation" x="1687" y="-150"/>
         </scene>
         <!--Destination Detail View Controller-->
         <scene sceneID="qqO-bS-T3l">
@@ -197,7 +197,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTY-t9-sfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2291" y="-150"/>
+            <point key="canvasLocation" x="3035" y="95"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -264,7 +264,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                     </tableView>
                     <navigationItem key="navigationItem" id="D4Z-y0-x8v">
                         <nil key="title"/>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ONB-bW-aVC">
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ONB-bW-aVC">
                             <rect key="frame" x="163.5" y="7" width="87" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="View Credits"/>
@@ -331,13 +331,63 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="RcQ-jr-bZX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageTableViewCell" id="gJU-ez-8hv" customClass="ImageTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RcQ-jr-bZX" id="zHT-cE-JAR">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gJU-ez-8hv" id="rs4-Qu-RI1">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gFP-75-DFS">
+                                            <rect key="frame" x="2" y="2" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="gFP-75-DFS" secondAttribute="height" multiplier="1:1" id="N3v-Sr-1k9"/>
+                                                <constraint firstAttribute="height" constant="40" id="z5L-h2-rHa"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G4-Sa-sdK">
+                                            <rect key="frame" x="62" y="11.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8G4-Sa-sdK" firstAttribute="centerY" secondItem="rs4-Qu-RI1" secondAttribute="centerY" id="CEb-1v-oo7"/>
+                                        <constraint firstItem="8G4-Sa-sdK" firstAttribute="leading" secondItem="gFP-75-DFS" secondAttribute="trailing" constant="20" id="NqS-Am-eVl"/>
+                                        <constraint firstItem="gFP-75-DFS" firstAttribute="centerY" secondItem="rs4-Qu-RI1" secondAttribute="centerY" id="nsQ-Yg-DSd"/>
+                                        <constraint firstItem="gFP-75-DFS" firstAttribute="leading" secondItem="rs4-Qu-RI1" secondAttribute="leading" constant="2" id="sDm-Oi-2xA"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="icon" destination="gFP-75-DFS" id="18f-AD-qfP"/>
+                                    <outlet property="title" destination="8G4-Sa-sdK" id="mxE-P5-spK"/>
+                                    <segue destination="Skn-lg-LU3" kind="show" identifier="dest" id="CG1-gW-av0"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="notesCell" id="1SB-po-mgd" customClass="NotesTableViewCell" customModule="PokemonRegionTours" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1SB-po-mgd" id="CcU-GF-Tw3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weA-DJ-kRy">
+                                            <rect key="frame" x="186" y="11.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="weA-DJ-kRy" firstAttribute="centerX" secondItem="CcU-GF-Tw3" secondAttribute="centerX" id="39w-B0-n3Q"/>
+                                        <constraint firstItem="weA-DJ-kRy" firstAttribute="centerY" secondItem="CcU-GF-Tw3" secondAttribute="centerY" id="pOt-hV-8BR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="weA-DJ-kRy" id="HJu-Pz-DjD"/>
+                                    <segue destination="69q-hH-9PH" kind="show" identifier="notes" id="2Hp-q4-6Is"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -437,7 +487,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sample Text" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="22" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FbL-Yh-xyz">
-                                <rect key="frame" x="111" y="108" width="180" height="44.5"/>
+                                <rect key="frame" x="111" y="108" width="180" height="93.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -445,13 +495,13 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xXe-9B-urR">
-                                <rect key="frame" x="20" y="363" width="374" height="381"/>
+                                <rect key="frame" x="20" y="412" width="374" height="381"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="GcX-f2-iTy"/>
                                     <constraint firstAttribute="height" constant="381" id="yed-32-zqJ"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -515,9 +565,13 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aph-cu-Il8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2453.6231884057975" y="539.0625"/>
+            <point key="canvasLocation" x="3036" y="842"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2Hp-q4-6Is"/>
+        <segue reference="CG1-gW-av0"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="doc.text.fill" catalog="system" width="115" height="128"/>
