@@ -46,7 +46,7 @@ class FavoritesViewController : UITableViewController {
     
             return cell
         }
-    }/Users/garveyn/Desktop/iOS Projects/PokemonRegionTours/PokemonRegionTours/ViewControllers/Favorites/FavoritesViewController.swift
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
