@@ -15,11 +15,7 @@ class FavoritesViewController : UITableViewController {
         let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         return documents.appendingPathComponent("notes.plist")
     }
-    
-<<<<<<< HEAD
-   
-=======
->>>>>>> 0e92ba9c223114b5a07d4c42b3500794af456f6e
+ 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
