@@ -12,6 +12,10 @@ import UIKit
 class NotesViewController : UITableViewController {
 
     var NotesStore = ItemStore()
+    var plistURL : URL {
+        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        return documents.appendingPathComponent("notes.plist")
+    }
     
     @IBAction func addNewNotes(_ sender: Any) {
         // Create a new Item and add it to the store
@@ -32,13 +36,14 @@ class NotesViewController : UITableViewController {
         // Do any additional setup after loading the view.
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
+        NotesStore.allItems = [Notes]()
+        NotesStore.loadItems(file: plistURL, of: Notes.self)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
     }
-    
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,5 +72,9 @@ class NotesViewController : UITableViewController {
         default:
             preconditionFailure("Unexpected segue identifier")
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotesStore.saveItems(file: plistURL, of: Notes.self)
     }
 }

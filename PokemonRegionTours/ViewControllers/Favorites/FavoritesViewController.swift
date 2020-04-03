@@ -11,13 +11,21 @@ import UIKit
 class FavoritesViewController : UITableViewController {
     
     let favStore: ItemStore = ItemStore()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let _ = favStore.loadItems(from: "destinations", of: Destination.self)
-        favStore.allItems = favStore.allItems.filter({ $0.favorite })
+    var plistURL : URL {
+        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        return documents.appendingPathComponent("notes.plist")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        favStore.allItems = [Itemable]()
+        let _ = favStore.loadItems(from: "destinations", of: Destination.self)
+        let _ = favStore.loadItems(file: plistURL, of: Notes.self)
+        favStore.allItems = favStore.allItems.filter({ $0.favorite })
+        tableView.reloadData()
+    }
+    
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

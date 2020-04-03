@@ -34,7 +34,7 @@ class ItemStore {
             let url = Bundle.main.url(forResource: plist, withExtension: "plist")!
             let data = try Data(contentsOf: url)
             let decoder = PropertyListDecoder()
-            allItems = try decoder.decode([Type].self, from: data)
+            allItems.append(contentsOf: try decoder.decode([Type].self, from: data))
         } catch let error {
             print(error)
             return false
@@ -47,7 +47,7 @@ class ItemStore {
         do {
             let data = try Data(contentsOf: file)
             let decoder = PropertyListDecoder()
-            allItems = try decoder.decode([Type].self, from: data)
+            allItems.append(contentsOf: try decoder.decode([Type].self, from: data))
         } catch let error {
             print(error)
             return false
@@ -59,7 +59,7 @@ class ItemStore {
         
         let encoder = PropertyListEncoder()
         
-        if let data = try? encoder.encode(allItems as! Type) {
+        if let data = try? encoder.encode(allItems as! [Type]) {
             FileManager.default.createFile(atPath: file.path, contents: data, attributes: nil)
         }
         
