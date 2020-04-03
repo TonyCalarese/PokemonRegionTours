@@ -65,7 +65,6 @@ class NotesDetailViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func FavoritePage(_ sender: UIButton) {
         notes?.favorite = !(notes?.favorite ?? false) //default to false just in case
-
         favoriteItem()
     }
     

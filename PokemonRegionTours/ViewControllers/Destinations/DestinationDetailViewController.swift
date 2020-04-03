@@ -16,6 +16,23 @@ class DestinationDetailViewController: UIViewController {
     @IBOutlet weak var destTitle: UILabel!
     @IBOutlet weak var destDesc: UILabel!
     
+    @IBOutlet weak var FavoriteButton: UIButton!
+    
+    @IBAction func FavoriteItem(_ sender: UIButton) {
+        destination?.favorite = !(destination?.favorite ?? false) //default to false just in case
+        favoriteItem()
+       }
+    
+    func favoriteItem(){
+           if destination?.favorite == true{
+               print("Favoriting")
+               FavoriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+           }else{
+               print("UnFavoriting")
+               FavoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+           }
+       }
+    
     var destination: Destination? = nil
     let zoomDistance: CLLocationDistance = 1000
     
@@ -35,8 +52,15 @@ class DestinationDetailViewController: UIViewController {
             location.setRegion(region, animated: true)
         }
         // Do any additional setup after loading the view.
+        favoriteItem()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+
+           if let fave = destination?.favorite {
+               destination?.favorite = fave
+           }
+       }
 
 
 }

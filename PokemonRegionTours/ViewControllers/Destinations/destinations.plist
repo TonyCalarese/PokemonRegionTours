@@ -51,7 +51,7 @@ It evolves into Gyarados starting at level 20.</string>
 		<key>image</key>
 		<string>Magikarp</string>
 		<key>favorite</key>
-		<true/>
+		<false/>
 		<key>lat</key>
 		<real>44.4961895</real>
 		<key>long</key>

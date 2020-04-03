@@ -187,8 +187,23 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EMe-av-xd5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YdV-Hi-lAL"/>
+                    <navigationItem key="navigationItem" id="YdV-Hi-lAL">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="fcn-3r-zwz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Ak-MN-4S9">
+                                <rect key="frame" x="318" y="11" width="76" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="star" catalog="system"/>
+                                <connections>
+                                    <action selector="FavoriteItem:" destination="Skn-lg-LU3" eventType="touchUpInside" id="KKU-ak-6HS"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <action selector="FavoriteItem:" destination="Skn-lg-LU3" id="moK-er-VlE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="FavoriteButton" destination="7Ak-MN-4S9" id="5Dh-YC-RIw"/>
                         <outlet property="destDesc" destination="Inj-c1-15X" id="p6c-Ww-2EJ"/>
                         <outlet property="destTitle" destination="gmZ-2H-cWH" id="pmQ-Oi-WSz"/>
                         <outlet property="location" destination="VUX-R0-nbY" id="jMD-UA-kNi"/>
@@ -487,7 +502,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sample Text" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="22" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FbL-Yh-xyz">
-                                <rect key="frame" x="111" y="108" width="180" height="93.5"/>
+                                <rect key="frame" x="111" y="108" width="180" height="44.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -495,7 +510,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xXe-9B-urR">
-                                <rect key="frame" x="20" y="412" width="374" height="381"/>
+                                <rect key="frame" x="20" y="363" width="374" height="381"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="GcX-f2-iTy"/>
@@ -507,14 +522,14 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvR-PV-U7P">
-                                <rect key="frame" x="192" y="336" width="19" height="19"/>
+                                <rect key="frame" x="192" y="385" width="19" height="19"/>
                                 <state key="normal" image="square.and.arrow.up" catalog="system"/>
                                 <connections>
                                     <action selector="uploadImage:" destination="69q-hH-9PH" eventType="touchUpInside" id="QYg-kO-5pX"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="folder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BDg-Zd-X1V">
-                                <rect key="frame" x="96" y="161" width="210" height="154.5"/>
+                                <rect key="frame" x="96" y="210" width="210" height="154.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -572,7 +587,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Hp-q4-6Is"/>
+        <segue reference="kTi-fY-MZo"/>
         <segue reference="CG1-gW-av0"/>
     </inferredMetricsTieBreakers>
     <resources>
