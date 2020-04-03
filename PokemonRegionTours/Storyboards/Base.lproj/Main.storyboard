@@ -464,7 +464,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="folder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BDg-Zd-X1V">
-                                <rect key="frame" x="133" y="161" width="210" height="154.5"/>
+                                <rect key="frame" x="96" y="161" width="210" height="154.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -498,6 +498,9 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="FavoritePage:" destination="69q-hH-9PH" eventType="touchUpInside" id="tEk-QN-Q7C"/>
+                                </connections>
                             </button>
                             <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -507,7 +510,7 @@ Nisl dolores lobortis vix in. Sit putant persius no, periculis accusamus an sea,
                     </navigationItem>
                     <connections>
                         <outlet property="BodyText" destination="xXe-9B-urR" id="BvR-nX-d5g"/>
-                        <outlet property="FavoriteButton" destination="CUu-Dn-Sci" id="v2y-SS-nGP"/>
+                        <outlet property="FavoriteButton" destination="RNj-Le-hxk" id="97R-Js-rb1"/>
                         <outlet property="ImageButton" destination="RvR-PV-U7P" id="Fbj-3r-n3g"/>
                         <outlet property="NoteTitle" destination="FbL-Yh-xyz" id="Ii2-TB-mAE"/>
                         <outlet property="NotesImage" destination="BDg-Zd-X1V" id="9m4-X1-9em"/>

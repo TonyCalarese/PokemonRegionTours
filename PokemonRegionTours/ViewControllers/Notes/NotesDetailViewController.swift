@@ -64,17 +64,20 @@ class NotesDetailViewController: UIViewController, UIImagePickerControllerDelega
    
     
     @IBAction func FavoritePage(_ sender: UIButton) {
+        notes?.favorite = !(notes?.favorite ?? false) //default to false just in case
+
         favoriteItem()
     }
     
     
     func favoriteItem(){
-        if notes?.favorite == false{
+        if notes?.favorite == true{
+            print("Favoriting")
             FavoriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
         }else{
+            print("UnFavoriting")
             FavoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
         }
-        notes?.favorite = !(notes?.favorite ?? false) //default to false just in case
     }
     
     override func viewDidLoad() {
@@ -95,7 +98,7 @@ class NotesDetailViewController: UIViewController, UIImagePickerControllerDelega
             NotesImage.image = image
         }
         
-        //favoriteItem()
+        favoriteItem()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
