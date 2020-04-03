@@ -53,6 +53,7 @@ class NotesDetailViewController: UIViewController, UIImagePickerControllerDelega
         guard let imageURL = info[UIImagePickerController.InfoKey.imageURL] as? URL else {
                 return
             }
+        print(imageURL.absoluteString)
         notes?.image = imageURL.absoluteString
         NotesImage.image = image
         picker.dismiss(animated: true) {
